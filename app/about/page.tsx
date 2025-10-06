@@ -116,55 +116,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Pillars of Expertise */}
-      <section className="section-white">
-        <div className="container">
-          <div className="section-header">
-            <h2>Elphina Pillars of Expertise</h2>
-            <p>Elphina is more than a source of capital; We&rsquo;re a human-centered venture engine built for long-term value creation and global impact.</p>
-          </div>
-
-          <div className="pillars-grid">
-            <div className="pillar-card">
-              <TrendingUp size={44} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1.25rem' }} />
-              <h4>Operating Infrastructure</h4>
-              <p>We provide the necessary infrastructure, knowledge capital, and growth strategy to our portfolio.</p>
-              <p>Our expert ecosystem unites seasoned business executives and operators from:</p>
-              <ul>
-                <li><Dna size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />BioTech</li>
-                <li><Heart size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />HealthTech</li>
-                <li><Activity size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />MedTech</li>
-                <li><Stethoscope size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />Diagnostics</li>
-                <li><Dna size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />Genomics</li>
-                <li><Heart size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />Therapeutics</li>
-                <li><Brain size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />AI &amp; Neuroscience</li>
-              </ul>
-            </div>
-
-            <div className="pillar-card">
-              <Sparkles size={44} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1.25rem' }} />
-              <h4>Elite Partnerships</h4>
-              <p>Drawn from leading tech and consulting firms:</p>
-              <ul>
-                <li><Cpu size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />Google</li>
-                <li><Cpu size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />Microsoft</li>
-                <li><Cpu size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />Amazon</li>
-                <li><Cpu size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />Booz Allen</li>
-                <li><Cpu size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />HP</li>
-                <li><Cpu size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />CSC</li>
-                <li><Stethoscope size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />Leading clinical systems</li>
-              </ul>
-            </div>
-
-            <div className="pillar-card">
-              <Heart size={44} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1.25rem' }} />
-              <h4>Scientific &amp; Cultural Expertise</h4>
-              <p>We partner with behavioral scientists, longevity researchers, and wellness thought leaders to co-create trust, drive adoption, and tailor solutions to every community and environment.</p>
-              <p style={{ marginTop: '1.5rem' }}>The portfolio gains access to a network that supports breakthroughs that drive VitalTechAI (E-VTA)<span className="tm">&trade;</span> into the very fabric of daily life, delivering financial returns to investors and enduring impact for people, portfolios, and the planet.</p>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
