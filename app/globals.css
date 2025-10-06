@@ -196,9 +196,10 @@ nav {
   transform: translateY(-2px);
 }
 
-/* Section Styles */
+/* Section Styles with Color Strips */
 section {
   padding: 6rem 0;
+  position: relative;
 }
 
 .section-white {
@@ -207,6 +208,50 @@ section {
 
 .section-off-white {
   background: var(--off-white);
+}
+
+.section-periwinkle-light {
+  background: var(--periwinkle-light);
+}
+
+.section-periwinkle-light .section-header h2,
+.section-periwinkle-light .section-header p {
+  color: var(--white);
+}
+
+.section-periwinkle-light .card {
+  background: var(--white);
+  border-color: var(--white);
+}
+
+.section-periwinkle-light .card h3 {
+  color: var(--aurora-purple);
+}
+
+.section-periwinkle-light .card p {
+  color: var(--charcoal);
+}
+
+.section-charcoal {
+  background: var(--charcoal);
+  color: var(--white);
+}
+
+.section-gradient {
+  background: linear-gradient(135deg, var(--aurora-cyan) 0%, var(--aurora-purple) 100%);
+  position: relative;
+}
+
+.section-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .section-header {

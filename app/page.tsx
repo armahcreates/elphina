@@ -116,7 +116,7 @@ export default function Home() {
       </section>
 
       {/* What We Fund Section */}
-      <section id="focus" className="section-off-white">
+      <section id="focus" className="section-white">
         <div className="container">
           <div className="section-header">
             <h2>What We Fund</h2>
@@ -160,7 +160,7 @@ export default function Home() {
       </section>
 
       {/* Why Elphina Section */}
-      <section id="why" className="section-white">
+      <section id="why" className="section-periwinkle-light">
         <div className="container">
           <div className="section-header">
             <h2>Why Elphina?</h2>
@@ -184,7 +184,7 @@ export default function Home() {
       </section>
 
       {/* VitalTechAI in Action Section */}
-      <section id="portfolio" className="section-off-white">
+      <section id="portfolio" className="section-white">
         <div className="container">
           <div className="section-header">
             <h2>VitalTechAI (E-VTA)<span className="tm">&trade;</span> in Action</h2>

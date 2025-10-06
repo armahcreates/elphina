@@ -49,7 +49,7 @@ export default function About() {
       </section>
 
       {/* Movement Section */}
-      <section className="section-off-white">
+      <section className="section-white">
         <div className="container">
           <div className="section-header">
             <h2>Elphina HCF is More Than a Fund<br />It&rsquo;s a Movement.</h2>
@@ -89,7 +89,7 @@ export default function About() {
       </section>
 
       {/* VitalTechAI Details */}
-      <section className="section-white">
+      <section className="section-off-white">
         <div className="container">
           <div className="content-text">
             <p>HCF raises impact capital for a different kind of outcome: <strong>intelligent, regenerative, and deeply human.</strong> Elphina&rsquo;s HCF backs the next wave of VitalTechAI (E-VTA)<span className="tm">&trade;</span> platforms &mdash; scientifically rigorous startups that weave human-centered AI and bio-intelligence into every facet of daily life.</p>
@@ -107,7 +107,7 @@ export default function About() {
       </section>
 
       {/* Pillars of Expertise */}
-      <section className="section-off-white">
+      <section className="section-white">
         <div className="container">
           <div className="section-header">
             <h2>Elphina Pillars of Expertise</h2>

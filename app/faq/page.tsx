@@ -173,9 +173,9 @@ export default function FAQ() {
             <div key={categoryIndex} style={{ marginBottom: '3rem' }}>
               <h2 style={{
                 fontSize: '1.75rem',
-                color: 'var(--primary)',
+                color: 'var(--aurora-purple)',
                 marginBottom: '2rem',
-                borderBottom: '2px solid var(--border)',
+                borderBottom: '2px solid var(--periwinkle-light)',
                 paddingBottom: '0.75rem',
                 fontWeight: '700',
                 letterSpacing: '-0.5px'
@@ -192,7 +192,7 @@ export default function FAQ() {
                     key={faqIndex}
                     style={{
                       marginBottom: '1rem',
-                      border: '1px solid var(--border)',
+                      border: '2px solid var(--off-white)',
                       borderRadius: '12px',
                       overflow: 'hidden',
                       transition: 'all 0.2s ease'
@@ -203,7 +203,7 @@ export default function FAQ() {
                       style={{
                         width: '100%',
                         padding: '1.25rem 1.5rem',
-                        background: isOpen ? 'var(--background-secondary)' : 'var(--background)',
+                        background: isOpen ? 'var(--periwinkle-light)' : 'var(--white)',
                         border: 'none',
                         textAlign: 'left',
                         cursor: 'pointer',
@@ -212,8 +212,8 @@ export default function FAQ() {
                         alignItems: 'center',
                         fontSize: '1.0625rem',
                         fontWeight: '600',
-                        color: 'var(--text-primary)',
-                        transition: 'all 0.2s ease',
+                        color: isOpen ? 'var(--white)' : 'var(--charcoal)',
+                        transition: 'all 0.3s ease',
                         fontFamily: 'inherit'
                       }}
                     >
@@ -221,8 +221,8 @@ export default function FAQ() {
                       <span style={{
                         fontSize: '1.25rem',
                         transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-                        transition: 'transform 0.2s ease',
-                        color: 'var(--text-secondary)'
+                        transition: 'transform 0.3s ease',
+                        color: isOpen ? 'var(--white)' : 'var(--periwinkle)'
                       }}>
                         ▼
                       </span>
@@ -231,11 +231,11 @@ export default function FAQ() {
                     {isOpen && (
                       <div style={{
                         padding: '1.5rem',
-                        background: 'var(--background-secondary)',
+                        background: 'var(--off-white)',
                         fontSize: '1rem',
                         lineHeight: '1.7',
-                        color: 'var(--text-secondary)',
-                        borderTop: '1px solid var(--border)'
+                        color: 'var(--charcoal)',
+                        borderTop: '2px solid var(--periwinkle-light)'
                       }}>
                         {faq.a}
                       </div>
@@ -250,20 +250,21 @@ export default function FAQ() {
           <div style={{
             marginTop: '4rem',
             padding: '3.5rem 3rem',
-            background: 'var(--primary)',
-            borderRadius: '16px',
+            background: 'linear-gradient(135deg, var(--periwinkle-light), var(--periwinkle))',
+            borderRadius: '20px',
             textAlign: 'center',
-            color: 'var(--background)'
+            color: 'var(--white)',
+            boxShadow: '0 10px 40px rgba(138, 141, 203, 0.2)'
           }}>
             <h3 style={{ fontSize: '1.75rem', marginBottom: '1rem', fontWeight: '600' }}>Still have questions?</h3>
             <p style={{ fontSize: '1.125rem', marginBottom: '2rem', opacity: '0.95' }}>
               We&rsquo;re here to help you understand how Elphina can support your vision.
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/#contact" className="btn" style={{ background: 'var(--background)', color: 'var(--primary)' }}>
+              <Link href="/#contact" className="btn btn-primary">
                 Contact Us
               </Link>
-              <a href="mailto:hello@elphinainnovations.com" className="btn" style={{ background: 'transparent', color: 'var(--background)', border: '1.5px solid var(--background)' }}>
+              <a href="mailto:hello@elphinainnovations.com" className="btn btn-secondary">
                 Email Us
               </a>
             </div>
@@ -274,7 +275,7 @@ export default function FAQ() {
       {/* Quick Links */}
       <section className="section-off-white" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
         <div className="container" style={{ maxWidth: '900px', textAlign: 'center' }}>
-          <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem', color: 'var(--text-primary)', fontWeight: '600' }}>
+          <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem', color: 'var(--charcoal)', fontWeight: '600' }}>
             Learn More About Elphina
           </h3>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
