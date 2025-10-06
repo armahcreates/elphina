@@ -144,11 +144,11 @@ export default function Fund() {
             <p>We invest in companies that are:</p>
             <br />
             <ul style={{ listStyle: 'none', paddingLeft: 0, textAlign: 'center', fontSize: '1.15rem' }}>
-              <li style={{ marginBottom: '0.8rem' }}>⚡ <strong>Scientifically rigorous</strong> with validated technology</li>
-              <li style={{ marginBottom: '0.8rem' }}>⚡ <strong>Human-centered</strong> in design and execution</li>
-              <li style={{ marginBottom: '0.8rem' }}>⚡ <strong>Scalable</strong> across markets and demographics</li>
-              <li style={{ marginBottom: '0.8rem' }}>⚡ <strong>Impact-driven</strong> with measurable health outcomes</li>
-              <li style={{ marginBottom: '0.8rem' }}>⚡ <strong>Revenue-generating</strong> with sustainable business models</li>
+              <li style={{ marginBottom: '0.8rem' }}>• <strong>Scientifically rigorous</strong> with validated technology</li>
+              <li style={{ marginBottom: '0.8rem' }}>• <strong>Human-centered</strong> in design and execution</li>
+              <li style={{ marginBottom: '0.8rem' }}>• <strong>Scalable</strong> across markets and demographics</li>
+              <li style={{ marginBottom: '0.8rem' }}>• <strong>Impact-driven</strong> with measurable health outcomes</li>
+              <li style={{ marginBottom: '0.8rem' }}>• <strong>Revenue-generating</strong> with sustainable business models</li>
             </ul>
           </div>
         </div>

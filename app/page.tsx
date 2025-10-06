@@ -84,10 +84,10 @@ export default function Home() {
             <p><strong>We&rsquo;re not investing in AI that displaces people; we&rsquo;re backing AI that restores people</strong> &mdash; their health, clarity, energy, performance, and aging. Impact technology that is accessible and attainable, human-centered and infrastructure of vitality where:</p>
             <br />
             <ul style={{ listStyle: 'none', paddingLeft: 0, textAlign: 'center', fontSize: '1.15rem' }}>
-              <li style={{ marginBottom: '0.8rem' }}>⚡ Performance is personalized</li>
-              <li style={{ marginBottom: '0.8rem' }}>⚡ Work supports well-being</li>
-              <li style={{ marginBottom: '0.8rem' }}>⚡ Nutrition adapts to the individual</li>
-              <li style={{ marginBottom: '0.8rem' }}>⚡ HMI Technology enhances rather than overwhelms the human experience</li>
+              <li style={{ marginBottom: '0.8rem' }}>• Performance is personalized</li>
+              <li style={{ marginBottom: '0.8rem' }}>• Work supports well-being</li>
+              <li style={{ marginBottom: '0.8rem' }}>• Nutrition adapts to the individual</li>
+              <li style={{ marginBottom: '0.8rem' }}>• HMI Technology enhances rather than overwhelms the human experience</li>
             </ul>
           </div>
         </div>
