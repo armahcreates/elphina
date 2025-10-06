@@ -309,11 +309,6 @@ section {
   transform: translateY(-2px);
 }
 
-.investment-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
 .investment-card h4 {
   font-size: 1.125rem;
   color: var(--primary);

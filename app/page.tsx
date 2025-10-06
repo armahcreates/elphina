@@ -82,15 +82,15 @@ export default function Home() {
           </div>
           <div className="three-col-grid" style={{ maxWidth: '1200px', margin: '2rem auto' }}>
             <div className="card">
-              <h3>🔬 Founders</h3>
+              <h3>Founders</h3>
               <p>Creating bioadaptive, intelligent platforms</p>
             </div>
             <div className="card">
-              <h3>💼 LPs</h3>
+              <h3>LPs</h3>
               <p>Who care about legacy, wellbeing, and future-proofing civilization</p>
             </div>
             <div className="card">
-              <h3>🧬 Experts</h3>
+              <h3>Experts</h3>
               <p>In AI, nutrition, biotech, and healing systems</p>
             </div>
           </div>
@@ -109,42 +109,34 @@ export default function Home() {
           </div>
           <div className="investment-grid">
             <div className="investment-card">
-              <div className="investment-icon">🧬</div>
               <h4>BioTech</h4>
               <p>Functional biology, agriculture, environment, genomic precision &amp; personalization</p>
             </div>
             <div className="investment-card">
-              <div className="investment-icon">🥗</div>
               <h4>Functional Nutrition</h4>
               <p>Precision wellness powered by microbiome &amp; metabolism. Food as Medicine, Nutraceuticals, and Ancestral Healing</p>
             </div>
             <div className="investment-card">
-              <div className="investment-icon">💚</div>
               <h4>HealthTech</h4>
               <p>Personalized care tools and digital wellness platforms</p>
             </div>
             <div className="investment-card">
-              <div className="investment-icon">⚕️</div>
               <h4>MedTech</h4>
               <p>Smart diagnostics, wearables, and preventative monitoring</p>
             </div>
             <div className="investment-card">
-              <div className="investment-icon">🏗️</div>
               <h4>Infrastructure of Vitality</h4>
               <p>End-to-end ecosystem built to power deeply personal, regenerative health and wellness experiences</p>
             </div>
             <div className="investment-card">
-              <div className="investment-icon">💼</div>
               <h4>Corporate Wellness Infrastructure</h4>
               <p>Paradigm Shift where SMART automated workflows are personalized and AI tools improve safety, energy, cognition, and retention</p>
             </div>
             <div className="investment-card">
-              <div className="investment-icon">📡</div>
               <h4>Media &amp; Communications</h4>
               <p>Integral parts of personalization, addressing the human factor, health &amp; well-being</p>
             </div>
             <div className="investment-card">
-              <div className="investment-icon">🏡</div>
               <h4>Wellness Real-Estate &amp; Resort Ecosystem</h4>
               <p>Canvas for regenerative, data-driven personalized health, wellness, and longevity</p>
             </div>

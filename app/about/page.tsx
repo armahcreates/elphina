@@ -65,19 +65,19 @@ export default function About() {
 
           <div className="ecosystem-grid">
             <div className="ecosystem-card">
-              <h4>🚀 Founders</h4>
+              <h4>Founders</h4>
               <p>Creating bioadaptive, intelligent platforms</p>
             </div>
             <div className="ecosystem-card">
-              <h4>💼 LPs</h4>
+              <h4>LPs</h4>
               <p>Who care about legacy, wellbeing, and future-proofing civilization</p>
             </div>
             <div className="ecosystem-card">
-              <h4>🧬 Experts</h4>
+              <h4>Experts</h4>
               <p>In AI, nutrition, biotech, and healing systems</p>
             </div>
             <div className="ecosystem-card">
-              <h4>🌍 Global Network</h4>
+              <h4>Global Network</h4>
               <p>People who see health, longevity, &amp; wellness as innovation&rsquo;s highest calling</p>
             </div>
           </div>
