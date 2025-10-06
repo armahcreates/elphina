@@ -281,12 +281,12 @@ nav {
 }
 
 .btn {
-  padding: var(--space-3) var(--space-8);
+  padding: var(--space-4) var(--space-10);
   font-size: var(--text-base);
   font-weight: 600;
   text-decoration: none;
-  border-radius: 6px;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   border: none;
   display: inline-flex;
@@ -294,38 +294,56 @@ nav {
   justify-content: center;
   font-family: inherit;
   letter-spacing: -0.01em;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
 }
 
 .btn-primary {
-  background: var(--periwinkle);
+  background: linear-gradient(135deg, var(--periwinkle), var(--aurora-purple));
   color: var(--white);
-  border: 1px solid var(--periwinkle);
-  box-shadow: var(--shadow-sm);
+  border: none;
+  box-shadow: 0 4px 12px rgba(138, 141, 203, 0.25);
 }
 
 .btn-primary:hover {
-  background: var(--aurora-purple);
-  border-color: var(--aurora-purple);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(138, 141, 203, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(138, 141, 203, 0.35);
 }
 
 .btn-secondary {
   background: var(--white);
   color: var(--aurora-purple);
-  border: 1px solid var(--periwinkle);
+  border: 2px solid var(--periwinkle);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .btn-secondary:hover {
-  background: var(--off-white);
+  background: linear-gradient(135deg, rgba(160, 233, 255, 0.1), rgba(125, 101, 163, 0.1));
   border-color: var(--aurora-purple);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(138, 141, 203, 0.2);
 }
 
 /* Section Styles - Premium Minimal */
 section {
   padding: var(--space-24) 0;
   position: relative;
+  overflow: hidden;
 }
 
 .section-white {
@@ -370,8 +388,8 @@ section {
 
 .section-header {
   text-align: center;
-  margin-bottom: var(--space-16);
-  max-width: 800px;
+  margin-bottom: var(--space-20);
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -382,7 +400,21 @@ section {
   margin-bottom: var(--space-6);
   letter-spacing: -0.03em;
   color: var(--aurora-purple);
-  line-height: 1.2;
+  line-height: 1.15;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--aurora-cyan), var(--periwinkle));
+  border-radius: 2px;
 }
 
 .section-header h3 {
@@ -396,9 +428,11 @@ section {
 .section-header p {
   font-size: var(--text-lg);
   color: var(--charcoal);
-  line-height: 1.7;
+  line-height: 1.8;
   letter-spacing: -0.01em;
   opacity: 0.85;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 /* Two Column Thesis Section */
@@ -510,22 +544,39 @@ section {
 
 .card {
   background: var(--white);
-  padding: var(--space-10);
-  border-radius: 12px;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(138, 141, 203, 0.2);
-  box-shadow: var(--shadow-sm);
+  padding: var(--space-12);
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(138, 141, 203, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card:hover {
   border-color: var(--periwinkle);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(138, 141, 203, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(138, 141, 203, 0.2);
+}
+
+.card svg {
+  margin: 0 auto var(--space-6);
+  padding: var(--space-4);
+  background: linear-gradient(135deg, rgba(160, 233, 255, 0.1), rgba(125, 101, 163, 0.1));
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.card:hover svg {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, rgba(160, 233, 255, 0.2), rgba(125, 101, 163, 0.2));
 }
 
 .card h3 {
   font-size: var(--text-2xl);
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-4);
   color: var(--aurora-purple);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -534,9 +585,10 @@ section {
 
 .card p {
   color: var(--charcoal);
-  line-height: 1.6;
+  line-height: 1.7;
   font-size: var(--text-base);
   letter-spacing: -0.01em;
+  opacity: 0.9;
 }
 
 /* Investment Categories - 3x2 Grid */
@@ -549,28 +601,42 @@ section {
 
 .investment-card {
   background: var(--white);
-  padding: var(--space-10) var(--space-8);
-  border-radius: 12px;
-  border: 1px solid rgba(138, 141, 203, 0.2);
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: var(--space-12) var(--space-10);
+  border-radius: 16px;
+  border: 1px solid rgba(138, 141, 203, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
-  min-height: 260px;
+  min-height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  box-shadow: var(--shadow-sm);
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .investment-card:hover {
   border-color: var(--periwinkle);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(138, 141, 203, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(138, 141, 203, 0.2);
+}
+
+.investment-card svg {
+  margin: 0 auto var(--space-4);
+  padding: var(--space-3);
+  background: linear-gradient(135deg, rgba(160, 233, 255, 0.1), rgba(125, 101, 163, 0.1));
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.investment-card:hover svg {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, rgba(160, 233, 255, 0.2), rgba(125, 101, 163, 0.2));
 }
 
 .investment-card h4 {
   font-size: var(--text-2xl);
   color: var(--aurora-purple);
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-4);
   font-weight: 700;
   letter-spacing: -0.02em;
 }
@@ -578,8 +644,9 @@ section {
 .investment-card p {
   color: var(--charcoal);
   font-size: var(--text-sm);
-  line-height: 1.6;
+  line-height: 1.7;
   letter-spacing: -0.01em;
+  opacity: 0.9;
 }
 
 /* VitalTechAI Cards - 2x2 Grid */
@@ -812,18 +879,34 @@ footer {
 
 .ecosystem-card {
   background: var(--white);
-  padding: var(--space-10) var(--space-8);
-  border-radius: 12px;
-  border: 1px solid rgba(138, 141, 203, 0.2);
+  padding: var(--space-12) var(--space-10);
+  border-radius: 16px;
+  border: 1px solid rgba(138, 141, 203, 0.15);
   text-align: center;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: var(--shadow-sm);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .ecosystem-card:hover {
   border-color: var(--periwinkle);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(138, 141, 203, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(138, 141, 203, 0.18);
+}
+
+.ecosystem-card svg {
+  margin: 0 auto var(--space-4);
+  padding: var(--space-3);
+  background: linear-gradient(135deg, rgba(160, 233, 255, 0.1), rgba(125, 101, 163, 0.1));
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.ecosystem-card:hover svg {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, rgba(160, 233, 255, 0.2), rgba(125, 101, 163, 0.2));
 }
 
 .ecosystem-card h4 {
@@ -836,9 +919,10 @@ footer {
 
 .ecosystem-card p {
   font-size: var(--text-sm);
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--charcoal);
   letter-spacing: -0.01em;
+  opacity: 0.9;
 }
 
 .pillars-grid {
@@ -913,16 +997,39 @@ footer {
 .hero-image {
   width: 100%;
   height: 400px;
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
   margin-bottom: var(--space-12);
-  box-shadow: 0 10px 40px rgba(138, 141, 203, 0.15);
+  box-shadow: 0 12px 48px rgba(138, 141, 203, 0.18);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 56px rgba(138, 141, 203, 0.25);
+}
+
+.hero-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.05) 100%);
+  pointer-events: none;
 }
 
 .hero-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover img {
+  transform: scale(1.02);
 }
 
 .image-grid-3 {
@@ -1097,11 +1204,16 @@ footer {
   }
 
   .card {
-    padding: var(--space-8);
+    padding: var(--space-10);
   }
 
   .card h3 {
     font-size: var(--text-xl);
+  }
+
+  .section-header h2::after {
+    width: 50px;
+    height: 3px;
   }
 
   .investment-card {
@@ -1213,7 +1325,16 @@ footer {
   .card,
   .investment-card,
   .vital-card {
-    padding: var(--space-6);
+    padding: var(--space-8);
+  }
+
+  .btn {
+    padding: var(--space-3) var(--space-8);
+  }
+
+  .section-header h2::after {
+    width: 40px;
+    height: 3px;
   }
 
   .mission-box,
