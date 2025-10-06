@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Home, Briefcase, Users, Dna, Apple, Heart, Activity, Building2, Radio, Palmtree, Lightbulb, Target, Sparkles, ArrowRight } from 'lucide-react';
+import { Home as HomeIcon, Briefcase, Users, Dna, Apple, Heart, Activity, Building2, Radio, Palmtree, Lightbulb, Target, Sparkles, ArrowRight } from 'lucide-react';
 import FounderForm from '@/components/FounderForm';
 import LPForm from '@/components/LPForm';
 
@@ -246,7 +246,7 @@ export default function Home() {
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}>
-              <Home size={40} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1rem' }} />
+              <HomeIcon size={40} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1rem' }} />
               <h4>Wellness Environments & Media</h4>
               <p>Intelligent, biophilic environments embedded with wellness tech. Ambient AI-powered communications and media experiences creating personalized engagement platforms for self-care and holistic health.</p>
             </div>
