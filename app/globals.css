@@ -229,6 +229,29 @@ nav {
   pointer-events: none;
 }
 
+/* Hero with Background Image */
+.hero-with-bg {
+  background-image:
+    linear-gradient(135deg, rgba(160, 233, 255, 0.85) 0%, rgba(125, 101, 163, 0.9) 100%),
+    url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-with-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
 .hero-content {
   max-width: 1100px;
   text-align: center;
@@ -352,6 +375,76 @@ section {
 
 .section-off-white {
   background: var(--off-white);
+}
+
+.section-mission-bg {
+  background-image:
+    linear-gradient(135deg, rgba(160, 233, 255, 0.85) 0%, rgba(125, 101, 163, 0.9) 100%),
+    url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding: var(--space-24) 0;
+}
+
+.section-mission-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.section-mission-bg .mission-box {
+  position: relative;
+  z-index: 2;
+}
+
+.section-mission-bg .mission-box h3,
+.section-mission-bg .mission-box p {
+  color: var(--white);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.section-why-bg {
+  background-image:
+    linear-gradient(135deg, rgba(160, 233, 255, 0.85) 0%, rgba(125, 101, 163, 0.9) 100%),
+    url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding: var(--space-24) 0;
+}
+
+.section-why-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 40% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 60% 80%, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.section-why-bg .section-header h2,
+.section-why-bg .section-header p {
+  color: var(--white);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.section-why-bg .container {
+  position: relative;
+  z-index: 2;
 }
 
 .section-periwinkle-light {

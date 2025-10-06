@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero aurora-bg">
+      <section className="hero hero-with-bg">
         <div className="hero-content">
           <h1>Building the Future of Health—Where We Live, Work, and Play</h1>
           <p className="hero-subtitle">Elphina Venture Studio</p>
@@ -54,7 +54,7 @@ export default function Home() {
       </section>
 
       {/* Mission Section */}
-      <section className="section-off-white">
+      <section className="section-mission-bg">
         <div className="container">
           <div className="mission-box">
             <h3>Mission: Intelligence Where Life Happens</h3>
@@ -203,7 +203,7 @@ export default function Home() {
       </section>
 
       {/* Why Elphina Section */}
-      <section id="why" className="section-periwinkle-light">
+      <section id="why" className="section-why-bg">
         <div className="container">
           <div className="section-header">
             <h2>Why Elphina?</h2>
