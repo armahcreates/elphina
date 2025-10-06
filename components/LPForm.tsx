@@ -49,10 +49,11 @@ export default function LPForm() {
     return (
       <div style={{
         padding: '3rem',
-        background: 'var(--primary)',
-        borderRadius: '16px',
+        background: 'linear-gradient(135deg, var(--periwinkle-light), var(--periwinkle))',
+        borderRadius: '20px',
         textAlign: 'center',
-        color: 'var(--background)'
+        color: 'var(--white)',
+        boxShadow: '0 10px 40px rgba(138, 141, 203, 0.2)'
       }}>
         <h3 style={{ fontSize: '2rem', marginBottom: '1rem', fontWeight: '600' }}>Thank you for your interest!</h3>
         <p style={{ fontSize: '1.125rem', opacity: '0.95' }}>We'll send you the LP deck and reach out within 2-3 business days.</p>
@@ -65,16 +66,17 @@ export default function LPForm() {
       maxWidth: '800px',
       margin: '0 auto',
       padding: '3rem',
-      background: 'var(--background)',
-      borderRadius: '16px',
-      border: '1px solid var(--border)'
+      background: 'var(--white)',
+      borderRadius: '20px',
+      border: '2px solid var(--off-white)',
+      boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)'
     }}>
-      <h3 style={{ fontSize: '1.75rem', marginBottom: '2rem', color: 'var(--primary)', textAlign: 'center', fontWeight: '600' }}>
+      <h3 style={{ fontSize: '2rem', marginBottom: '2rem', color: 'var(--aurora-purple)', textAlign: 'center', fontWeight: '700' }}>
         LP Inquiry Form
       </h3>
 
       <div style={{ marginBottom: '1.5rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
           Full Name *
         </label>
         <input
@@ -85,19 +87,22 @@ export default function LPForm() {
           required
           style={{
             width: '100%',
-            padding: '0.75rem',
-            border: '1px solid var(--border)',
-            borderRadius: '8px',
+            padding: '0.875rem',
+            border: '2px solid var(--off-white)',
+            borderRadius: '12px',
             fontSize: '1rem',
             fontFamily: 'inherit',
-            transition: 'border-color 0.2s ease'
+            transition: 'border-color 0.3s ease',
+            outline: 'none'
           }}
+          onFocus={(e) => e.currentTarget.style.borderColor = 'var(--periwinkle)'}
+          onBlur={(e) => e.currentTarget.style.borderColor = 'var(--off-white)'}
         />
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
             Email *
           </label>
           <input
@@ -116,7 +121,7 @@ export default function LPForm() {
           />
         </div>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
             Phone *
           </label>
           <input
@@ -137,7 +142,7 @@ export default function LPForm() {
       </div>
 
       <div style={{ marginBottom: '1.5rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
           Organization/Fund *
         </label>
         <input
@@ -148,19 +153,22 @@ export default function LPForm() {
           required
           style={{
             width: '100%',
-            padding: '0.75rem',
-            border: '1px solid var(--border)',
-            borderRadius: '8px',
+            padding: '0.875rem',
+            border: '2px solid var(--off-white)',
+            borderRadius: '12px',
             fontSize: '1rem',
             fontFamily: 'inherit',
-            transition: 'border-color 0.2s ease'
+            transition: 'border-color 0.3s ease',
+            outline: 'none'
           }}
+          onFocus={(e) => e.currentTarget.style.borderColor = 'var(--periwinkle)'}
+          onBlur={(e) => e.currentTarget.style.borderColor = 'var(--off-white)'}
         />
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
             Investor Type *
           </label>
           <select
@@ -170,14 +178,17 @@ export default function LPForm() {
             required
             style={{
               width: '100%',
-              padding: '0.75rem',
-              border: '1px solid var(--border)',
-              borderRadius: '8px',
+              padding: '0.875rem',
+              border: '2px solid var(--off-white)',
+              borderRadius: '12px',
               fontSize: '1rem',
-              background: 'var(--background)',
+              background: 'var(--white)',
               fontFamily: 'inherit',
-              transition: 'border-color 0.2s ease'
+              transition: 'border-color 0.3s ease',
+              outline: 'none'
             }}
+            onFocus={(e) => e.currentTarget.style.borderColor = 'var(--periwinkle)'}
+            onBlur={(e) => e.currentTarget.style.borderColor = 'var(--off-white)'}
           >
             <option value="">Select type</option>
             <option value="individual">Individual Investor</option>
@@ -189,7 +200,7 @@ export default function LPForm() {
           </select>
         </div>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
             Investment Range *
           </label>
           <select
@@ -199,14 +210,17 @@ export default function LPForm() {
             required
             style={{
               width: '100%',
-              padding: '0.75rem',
-              border: '1px solid var(--border)',
-              borderRadius: '8px',
+              padding: '0.875rem',
+              border: '2px solid var(--off-white)',
+              borderRadius: '12px',
               fontSize: '1rem',
-              background: 'var(--background)',
+              background: 'var(--white)',
               fontFamily: 'inherit',
-              transition: 'border-color 0.2s ease'
+              transition: 'border-color 0.3s ease',
+              outline: 'none'
             }}
+            onFocus={(e) => e.currentTarget.style.borderColor = 'var(--periwinkle)'}
+            onBlur={(e) => e.currentTarget.style.borderColor = 'var(--off-white)'}
           >
             <option value="">Select range</option>
             <option value="100k-500k">$100K - $500K</option>
@@ -219,7 +233,7 @@ export default function LPForm() {
       </div>
 
       <div style={{ marginBottom: '1.5rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
           Investment Interests
         </label>
         <textarea
@@ -230,19 +244,22 @@ export default function LPForm() {
           placeholder="What aspects of VitalTechAI (E-VTA)™ are you most interested in? (e.g., BioTech, HealthTech, Corporate Wellness)"
           style={{
             width: '100%',
-            padding: '0.75rem',
-            border: '1px solid var(--border)',
-            borderRadius: '8px',
+            padding: '0.875rem',
+            border: '2px solid var(--off-white)',
+            borderRadius: '12px',
             fontSize: '1rem',
             fontFamily: 'inherit',
             resize: 'vertical',
-            transition: 'border-color 0.2s ease'
+            transition: 'border-color 0.3s ease',
+            outline: 'none'
           }}
+          onFocus={(e) => e.currentTarget.style.borderColor = 'var(--periwinkle)'}
+          onBlur={(e) => e.currentTarget.style.borderColor = 'var(--off-white)'}
         />
       </div>
 
       <div style={{ marginBottom: '2rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
           Message
         </label>
         <textarea
@@ -253,14 +270,17 @@ export default function LPForm() {
           placeholder="Tell us more about your investment goals and why you're interested in Elphina HCF..."
           style={{
             width: '100%',
-            padding: '0.75rem',
-            border: '1px solid var(--border)',
-            borderRadius: '8px',
+            padding: '0.875rem',
+            border: '2px solid var(--off-white)',
+            borderRadius: '12px',
             fontSize: '1rem',
             fontFamily: 'inherit',
             resize: 'vertical',
-            transition: 'border-color 0.2s ease'
+            transition: 'border-color 0.3s ease',
+            outline: 'none'
           }}
+          onFocus={(e) => e.currentTarget.style.borderColor = 'var(--periwinkle)'}
+          onBlur={(e) => e.currentTarget.style.borderColor = 'var(--off-white)'}
         />
       </div>
 

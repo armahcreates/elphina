@@ -57,10 +57,11 @@ export default function FounderForm() {
     return (
       <div style={{
         padding: '3rem',
-        background: 'var(--primary)',
-        borderRadius: '16px',
+        background: 'linear-gradient(135deg, var(--periwinkle-light), var(--periwinkle))',
+        borderRadius: '20px',
         textAlign: 'center',
-        color: 'var(--background)'
+        color: 'var(--white)',
+        boxShadow: '0 10px 40px rgba(138, 141, 203, 0.2)'
       }}>
         <h3 style={{ fontSize: '2rem', marginBottom: '1rem', fontWeight: '600' }}>Thank you for your submission!</h3>
         <p style={{ fontSize: '1.125rem', opacity: '0.95' }}>We'll review your application and get back to you within 5-7 business days.</p>
@@ -73,16 +74,17 @@ export default function FounderForm() {
       maxWidth: '800px',
       margin: '0 auto',
       padding: '3rem',
-      background: 'var(--background)',
-      borderRadius: '16px',
-      border: '1px solid var(--border)'
+      background: 'var(--white)',
+      borderRadius: '20px',
+      border: '2px solid var(--off-white)',
+      boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)'
     }}>
-      <h3 style={{ fontSize: '1.75rem', marginBottom: '2rem', color: 'var(--primary)', textAlign: 'center', fontWeight: '600' }}>
+      <h3 style={{ fontSize: '2rem', marginBottom: '2rem', color: 'var(--aurora-purple)', textAlign: 'center', fontWeight: '700' }}>
         Founder Application
       </h3>
 
       <div style={{ marginBottom: '1.5rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
           Founder Name *
         </label>
         <input
@@ -93,19 +95,22 @@ export default function FounderForm() {
           required
           style={{
             width: '100%',
-            padding: '0.75rem',
-            border: '1px solid var(--border)',
-            borderRadius: '8px',
+            padding: '0.875rem',
+            border: '2px solid var(--off-white)',
+            borderRadius: '12px',
             fontSize: '1rem',
             fontFamily: 'inherit',
-            transition: 'border-color 0.2s ease'
+            transition: 'border-color 0.3s ease',
+            outline: 'none'
           }}
+          onFocus={(e) => e.currentTarget.style.borderColor = 'var(--periwinkle)'}
+          onBlur={(e) => e.currentTarget.style.borderColor = 'var(--off-white)'}
         />
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
             Email *
           </label>
           <input
@@ -124,7 +129,7 @@ export default function FounderForm() {
           />
         </div>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
             Phone
           </label>
           <input
@@ -144,7 +149,7 @@ export default function FounderForm() {
       </div>
 
       <div style={{ marginBottom: '1.5rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
           Company Name *
         </label>
         <input
@@ -155,19 +160,22 @@ export default function FounderForm() {
           required
           style={{
             width: '100%',
-            padding: '0.75rem',
-            border: '1px solid var(--border)',
-            borderRadius: '8px',
+            padding: '0.875rem',
+            border: '2px solid var(--off-white)',
+            borderRadius: '12px',
             fontSize: '1rem',
             fontFamily: 'inherit',
-            transition: 'border-color 0.2s ease'
+            transition: 'border-color 0.3s ease',
+            outline: 'none'
           }}
+          onFocus={(e) => e.currentTarget.style.borderColor = 'var(--periwinkle)'}
+          onBlur={(e) => e.currentTarget.style.borderColor = 'var(--off-white)'}
         />
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
             Company Website
           </label>
           <input
@@ -186,7 +194,7 @@ export default function FounderForm() {
           />
         </div>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
             Location *
           </label>
           <input
@@ -209,7 +217,7 @@ export default function FounderForm() {
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
             Stage *
           </label>
           <select
@@ -219,14 +227,17 @@ export default function FounderForm() {
             required
             style={{
               width: '100%',
-              padding: '0.75rem',
-              border: '1px solid var(--border)',
-              borderRadius: '8px',
+              padding: '0.875rem',
+              border: '2px solid var(--off-white)',
+              borderRadius: '12px',
               fontSize: '1rem',
-              background: 'var(--background)',
+              background: 'var(--white)',
               fontFamily: 'inherit',
-              transition: 'border-color 0.2s ease'
+              transition: 'border-color 0.3s ease',
+              outline: 'none'
             }}
+            onFocus={(e) => e.currentTarget.style.borderColor = 'var(--periwinkle)'}
+            onBlur={(e) => e.currentTarget.style.borderColor = 'var(--off-white)'}
           >
             <option value="">Select stage</option>
             <option value="pre-seed">Pre-Seed</option>
@@ -236,7 +247,7 @@ export default function FounderForm() {
           </select>
         </div>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
             Team Size *
           </label>
           <input
@@ -259,7 +270,7 @@ export default function FounderForm() {
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
             Sector *
           </label>
           <select
@@ -269,14 +280,17 @@ export default function FounderForm() {
             required
             style={{
               width: '100%',
-              padding: '0.75rem',
-              border: '1px solid var(--border)',
-              borderRadius: '8px',
+              padding: '0.875rem',
+              border: '2px solid var(--off-white)',
+              borderRadius: '12px',
               fontSize: '1rem',
-              background: 'var(--background)',
+              background: 'var(--white)',
               fontFamily: 'inherit',
-              transition: 'border-color 0.2s ease'
+              transition: 'border-color 0.3s ease',
+              outline: 'none'
             }}
+            onFocus={(e) => e.currentTarget.style.borderColor = 'var(--periwinkle)'}
+            onBlur={(e) => e.currentTarget.style.borderColor = 'var(--off-white)'}
           >
             <option value="">Select sector</option>
             <option value="biotech">BioTech</option>
@@ -291,7 +305,7 @@ export default function FounderForm() {
           </select>
         </div>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
             Funding Raised
           </label>
           <input
@@ -312,7 +326,7 @@ export default function FounderForm() {
       </div>
 
       <div style={{ marginBottom: '1.5rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
           Company Description *
         </label>
         <textarea
@@ -324,19 +338,22 @@ export default function FounderForm() {
           placeholder="Tell us about your company, your mission, and how you align with VitalTechAI (E-VTA)™..."
           style={{
             width: '100%',
-            padding: '0.75rem',
-            border: '1px solid var(--border)',
-            borderRadius: '8px',
+            padding: '0.875rem',
+            border: '2px solid var(--off-white)',
+            borderRadius: '12px',
             fontSize: '1rem',
             fontFamily: 'inherit',
             resize: 'vertical',
-            transition: 'border-color 0.2s ease'
+            transition: 'border-color 0.3s ease',
+            outline: 'none'
           }}
+          onFocus={(e) => e.currentTarget.style.borderColor = 'var(--periwinkle)'}
+          onBlur={(e) => e.currentTarget.style.borderColor = 'var(--off-white)'}
         />
       </div>
 
       <div style={{ marginBottom: '2rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
           Pitch Deck URL
         </label>
         <input
@@ -347,13 +364,16 @@ export default function FounderForm() {
           placeholder="https://... (Google Drive, Dropbox, etc.)"
           style={{
             width: '100%',
-            padding: '0.75rem',
-            border: '1px solid var(--border)',
-            borderRadius: '8px',
+            padding: '0.875rem',
+            border: '2px solid var(--off-white)',
+            borderRadius: '12px',
             fontSize: '1rem',
             fontFamily: 'inherit',
-            transition: 'border-color 0.2s ease'
+            transition: 'border-color 0.3s ease',
+            outline: 'none'
           }}
+          onFocus={(e) => e.currentTarget.style.borderColor = 'var(--periwinkle)'}
+          onBlur={(e) => e.currentTarget.style.borderColor = 'var(--off-white)'}
         />
       </div>
 

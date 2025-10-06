@@ -4,21 +4,19 @@ import Link from 'next/link';
 import { useState } from 'react';
 import FounderForm from '@/components/FounderForm';
 import LPForm from '@/components/LPForm';
-import ContactForm from '@/components/ContactForm';
 
 export default function Home() {
   const [showFounderForm, setShowFounderForm] = useState(false);
   const [showLPForm, setShowLPForm] = useState(false);
-  const [showContactForm, setShowContactForm] = useState(false);
 
   return (
     <>
       {/* Hero Section */}
       <section className="hero aurora-bg">
         <div className="hero-content">
-          <h1>&ldquo;The Next Frontier in Tech Isn&rsquo;t Just Smart&hellip; It&rsquo;s Personal, Accessible, And Deeply Impactful to Humans Where They Live, Work, And Play&rdquo;.</h1>
-          <p className="hero-subtitle">&mdash; Dr Christine Perales, CEO GP Elphina Humanity Centric Fund</p>
-          <h2>Backing impactful human-centered AI, infrastructure, and functional biotech &mdash; VitalTechAI (E-VTA)<span className="tm">&trade;</span><br />Elphina&rsquo;s $100M Fund empowering visionary founders building health and wellness infrastructure for the next generation.</h2>
+          <h1>Illuminating the Future of Health—Where We Live, Work, and Play</h1>
+          <p className="hero-subtitle">Dr Christine Perales, CEO GP Elphina Humanity Centric Fund</p>
+          <h2>Backing impactful human-centered AI, infrastructure, and functional biotech — VitalTechAI (E-VTA)<span className="tm">™</span></h2>
           <div className="cta-buttons">
             <Link href="#thesis" className="btn btn-primary">Explore the Thesis</Link>
             <Link href="#contact" className="btn btn-secondary">Pitch Us Your Company</Link>
@@ -26,29 +24,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Thesis Section */}
+      <section id="thesis" className="section-white">
+        <div className="container">
+          <div className="thesis-grid">
+            <div className="thesis-content">
+              <h3>The VitalTechAI (E-VTA)™ Paradigm</h3>
+              <p><strong>The next evolution in tech isn't about scale—it's about integration.</strong></p>
+              <p>Elphina HCF is at the forefront, funding impact-driven companies focused on the spaces people already inhabit, helping them evolve into environments of healing, vitality, and high performance.</p>
+              <p>We embed intelligence into:</p>
+              <ul style={{ listStyle: 'none', paddingLeft: 0 }}>
+                <li style={{ marginBottom: '0.75rem' }}>• <strong>Home environments</strong> via smart diagnostics and bioadaptive tools</li>
+                <li style={{ marginBottom: '0.75rem' }}>• <strong>Workplaces</strong> via corporate wellness ecosystems and productivity-enhancing AI</li>
+                <li style={{ marginBottom: '0.75rem' }}>• <strong>Communities</strong> through accessible, scalable tools that decentralize care</li>
+              </ul>
+            </div>
+            <div className="thesis-visual">
+              <h4>The Paradigm Shift</h4>
+              <div className="paradigm-shift">
+                <div>Sickcare</div>
+                <span>→</span>
+                <div>Selfcare</div>
+              </div>
+              <p style={{ marginTop: '2rem', fontSize: '1.125rem', opacity: '0.9' }}>From reactive healthcare to proactive, personalized wellness embedded in daily life</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Mission Section */}
-      <section className="section-white">
+      <section className="section-off-white">
         <div className="container">
           <div className="mission-box">
             <h3>Mission: Intelligence Where Life Happens</h3>
             <p>To empower innovators building intelligent, human-centered technologies that embed health and wellness to where people live, work, and play.</p>
           </div>
-          <div className="content-text">
-            <p><strong>The next evolution in tech isn&rsquo;t about scale &mdash; it&rsquo;s about integration.</strong> Elphina HCF is at the forefront funding impact-driven companies focused on the spaces people already inhabit, and help them evolve into environments of healing, vitality, and high performance by embedding intelligence into:</p>
-            <br />
-            <ul style={{ listStyle: 'none', paddingLeft: 0, maxWidth: '900px', margin: '0 auto' }}>
-              <li style={{ marginBottom: '1rem' }}>✦ <strong>Home environments</strong> via smart diagnostics, wearables, and bioadaptive tools</li>
-              <li style={{ marginBottom: '1rem' }}>✦ <strong>Workplaces</strong> via corporate wellness ecosystems paradigm shift, mental health platforms, and productivity-enhancing AI</li>
-              <li style={{ marginBottom: '1rem' }}>✦ <strong>Communities</strong> through accessible, scalable tools that decentralize care and elevate everyday health literacy</li>
-            </ul>
-            <br />
-            <p style={{ textAlign: 'center', fontSize: '1.15rem' }}><strong>Providing more than a source of capital; but an operating ecosystem, designed for long-term partnership and growth across the portfolio.</strong></p>
-          </div>
         </div>
       </section>
 
       {/* Vision Section */}
-      <section id="thesis" className="section-off-white">
+      <section className="section-white">
         <div className="container">
           <div className="section-header">
             <h2>Our Vision: The VitalTechAI (E-VTA)<span className="tm">&trade;</span> Paradigm Shift</h2>
@@ -186,35 +201,19 @@ export default function Home() {
           <div className="vital-cards">
             <div className="vital-card">
               <h4>Infrastructure-as-Wellness</h4>
-              <p>Infrastructure of Vitality from Smart building systems that adapt to occupant biometrics &mdash; optimizing not just comfort but health and well-being &mdash; to Corporate Wellness Infrastructure not just ergonomics, but technology-assisted productivity in the workplace through real-time human-machine interface that have employee health, safety and wellness as a KPI.</p>
+              <p>Smart building systems that adapt to occupant biometrics—optimizing not just comfort but health and well-being. Corporate Wellness Infrastructure with technology-assisted productivity through real-time human-machine interfaces prioritizing employee health, safety, and wellness.</p>
             </div>
             <div className="vital-card">
-              <h4>Super-Aging &amp; Resilience</h4>
-              <p>Longevity, BioHacking &amp; Wellness platforms driving true &ldquo;super-aging&rdquo; through preventive health and resilience against the Silver Tsunami.</p>
+              <h4>Functional Nutrition & BioTech</h4>
+              <p>AI-driven, personalized nutrition ecosystems that tune metabolic performance. BioTech innovations spanning Genomics, AgriTech, and precision medicine making "food as medicine" accessible and actionable for all.</p>
             </div>
             <div className="vital-card">
-              <h4>BioTech</h4>
-              <p>BioTech innovations spanning Genomics, AgriTech, EnviroTech precision medicine and actionable personalized care.</p>
+              <h4>Embedded Monitoring & Diagnostics</h4>
+              <p>AI-powered sensors and analytics woven into living spaces and on the move—catching early warning signs and enabling proactive care right where life happens, from home to workplace.</p>
             </div>
             <div className="vital-card">
-              <h4>Functional Nutrition: Food as Medicine &amp; Nutraceuticals</h4>
-              <p>AI-driven, personalized nutrition ecosystems that tune metabolic performance &mdash; making science-backed &ldquo;food as medicine&rdquo; as well as nutraceutical accessible and actionable for all.</p>
-            </div>
-            <div className="vital-card">
-              <h4>Embedded Monitoring &amp; Diagnostics</h4>
-              <p>AI-powered sensors and analytics woven into living spaces and on the move &mdash; catching early warning signs and enabling proactive care right where life happens.</p>
-            </div>
-            <div className="vital-card">
-              <h4>Mental Wellness &amp; Resilience Tech</h4>
-              <p>Human-centered AI tools and digital therapeutics for pain relief, trauma recovery, and cognitive resilience &mdash; empowering emotional well-being wherever life happens.</p>
-            </div>
-            <div className="vital-card">
-              <h4>Health &amp; Wellness Real Estate</h4>
-              <p>Intelligent, biophilic environments embedded with wellness tech &mdash; creating built spaces that support holistic health and elevate daily living as well as recreational resorts.</p>
-            </div>
-            <div className="vital-card">
-              <h4>Communication &amp; Media</h4>
-              <p>Ambient AI-powered Communications &amp; Media experiences personalization including intelligent realities and gaming to increase engagement and self-care.</p>
+              <h4>Wellness Environments & Media</h4>
+              <p>Intelligent, biophilic environments embedded with wellness tech. Ambient AI-powered communications and media experiences creating personalized engagement platforms for self-care and holistic health.</p>
             </div>
           </div>
         </div>
@@ -223,7 +222,7 @@ export default function Home() {
       {/* CTA Section */}
       <section id="contact" className="cta-section">
         <div className="container">
-          {!showFounderForm && !showLPForm && !showContactForm ? (
+          {!showFounderForm && !showLPForm ? (
             <div className="cta-grid">
               <div className="cta-box">
                 <h3>For Founders</h3>
@@ -232,13 +231,8 @@ export default function Home() {
               </div>
               <div className="cta-box">
                 <h3>For LPs</h3>
-                <p>Invest in the next wave of human-first wellness infrastructure.</p>
+                <p>Invest in the next wave of human-first wellness infrastructure. Join us in backing the builders of tomorrow's health ecosystem.</p>
                 <button className="btn btn-primary" onClick={() => setShowLPForm(true)}>Request the LP Deck</button>
-              </div>
-              <div className="cta-box">
-                <h3>General Inquiry</h3>
-                <p>Have questions or want to learn more about Elphina HCF?</p>
-                <button className="btn btn-primary" onClick={() => setShowContactForm(true)}>Contact Us</button>
               </div>
             </div>
           ) : showFounderForm ? (
@@ -248,18 +242,24 @@ export default function Home() {
                 style={{
                   marginBottom: '2rem',
                   padding: '0.75rem 1.5rem',
-                  background: 'transparent',
-                  border: '1px solid var(--border)',
-                  borderRadius: '8px',
+                  background: 'var(--white)',
+                  border: '2px solid var(--periwinkle)',
+                  borderRadius: '50px',
                   cursor: 'pointer',
-                  fontSize: '0.9375rem',
+                  fontSize: '1rem',
                   fontWeight: '600',
-                  color: 'var(--text-primary)',
+                  color: 'var(--periwinkle)',
                   fontFamily: 'inherit',
-                  transition: 'all 0.2s ease'
+                  transition: 'all 0.3s ease'
                 }}
-                onMouseOver={(e) => e.currentTarget.style.borderColor = 'var(--primary)'}
-                onMouseOut={(e) => e.currentTarget.style.borderColor = 'var(--border)'}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.background = 'var(--periwinkle)';
+                  e.currentTarget.style.color = 'var(--white)';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.background = 'var(--white)';
+                  e.currentTarget.style.color = 'var(--periwinkle)';
+                }}
               >
                 ← Back to Options
               </button>
@@ -272,48 +272,30 @@ export default function Home() {
                 style={{
                   marginBottom: '2rem',
                   padding: '0.75rem 1.5rem',
-                  background: 'transparent',
-                  border: '1px solid var(--border)',
-                  borderRadius: '8px',
+                  background: 'var(--white)',
+                  border: '2px solid var(--periwinkle)',
+                  borderRadius: '50px',
                   cursor: 'pointer',
-                  fontSize: '0.9375rem',
+                  fontSize: '1rem',
                   fontWeight: '600',
-                  color: 'var(--text-primary)',
+                  color: 'var(--periwinkle)',
                   fontFamily: 'inherit',
-                  transition: 'all 0.2s ease'
+                  transition: 'all 0.3s ease'
                 }}
-                onMouseOver={(e) => e.currentTarget.style.borderColor = 'var(--primary)'}
-                onMouseOut={(e) => e.currentTarget.style.borderColor = 'var(--border)'}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.background = 'var(--periwinkle)';
+                  e.currentTarget.style.color = 'var(--white)';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.background = 'var(--white)';
+                  e.currentTarget.style.color = 'var(--periwinkle)';
+                }}
               >
                 ← Back to Options
               </button>
               <LPForm />
             </div>
-          ) : (
-            <div>
-              <button
-                onClick={() => setShowContactForm(false)}
-                style={{
-                  marginBottom: '2rem',
-                  padding: '0.75rem 1.5rem',
-                  background: 'transparent',
-                  border: '1px solid var(--border)',
-                  borderRadius: '8px',
-                  cursor: 'pointer',
-                  fontSize: '0.9375rem',
-                  fontWeight: '600',
-                  color: 'var(--text-primary)',
-                  fontFamily: 'inherit',
-                  transition: 'all 0.2s ease'
-                }}
-                onMouseOver={(e) => e.currentTarget.style.borderColor = 'var(--primary)'}
-                onMouseOut={(e) => e.currentTarget.style.borderColor = 'var(--border)'}
-              >
-                ← Back to Options
-              </button>
-              <ContactForm />
-            </div>
-          )}
+          ) : null}
         </div>
       </section>
     </>
