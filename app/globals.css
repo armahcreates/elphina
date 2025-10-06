@@ -254,9 +254,9 @@ nav {
   font-size: var(--text-lg);
   color: var(--white);
   margin-bottom: var(--space-4);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.01em;
-  opacity: 0.95;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .hero h2 {
@@ -337,12 +337,12 @@ section {
 }
 
 .section-periwinkle-light {
-  background: linear-gradient(135deg, rgba(160, 233, 255, 0.05) 0%, rgba(125, 101, 163, 0.08) 100%);
+  background: linear-gradient(135deg, rgba(160, 233, 255, 0.08) 0%, rgba(125, 101, 163, 0.12) 100%);
 }
 
 .section-periwinkle-light .section-header h2,
 .section-periwinkle-light .section-header p {
-  color: var(--white);
+  color: var(--aurora-purple);
 }
 
 .section-periwinkle-light .card {

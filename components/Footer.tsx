@@ -8,12 +8,12 @@ export default function Footer() {
       <div className="footer-content">
         <div className="footer-links">
           <Link href="/about">About</Link>
+          <Link href="/fund">Fund</Link>
           <Link href="/faq">FAQ</Link>
-          <Link href="/#portfolio">Portfolio</Link>
           <Link href="/#contact">Contact</Link>
         </div>
         <div style={{ marginTop: 'var(--space-8)' }}>
-          <a href="mailto:hello@elphinainnovations.com" style={{ color: 'var(--gray-400)', fontSize: 'var(--text-sm)', textDecoration: 'none', transition: 'color 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--white)'} onMouseLeave={(e) => e.currentTarget.style.color = 'var(--gray-400)'}>
+          <a href="mailto:hello@elphinainnovations.com" style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: 'var(--text-sm)', textDecoration: 'none', transition: 'color 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.color = 'var(--white)'} onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}>
             hello@elphinainnovations.com
           </a>
         </div>

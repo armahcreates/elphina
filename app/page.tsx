@@ -15,12 +15,12 @@ export default function Home() {
       {/* Hero Section */}
       <section className="hero aurora-bg">
         <div className="hero-content">
-          <h1>Illuminating the Future of Health—Where We Live, Work, and Play</h1>
-          <p className="hero-subtitle">Dr Christine Perales, CEO GP Elphina Humanity Centric Fund</p>
-          <h2>Backing impactful human-centered AI, infrastructure, and functional biotech — VitalTechAI (E-VTA)<span className="tm">™</span></h2>
+          <h1>Building the Future of Health—Where We Live, Work, and Play</h1>
+          <p className="hero-subtitle">Elphina Venture Studio</p>
+          <h2>Creating and scaling impactful human-centered AI, infrastructure, and functional biotech companies — VitalTechAI (E-VTA)<span className="tm">™</span></h2>
           <div className="cta-buttons">
-            <Link href="#thesis" className="btn btn-primary">Explore the Thesis</Link>
-            <Link href="#contact" className="btn btn-secondary">Pitch Us Your Company</Link>
+            <Link href="#thesis" className="btn btn-primary">Explore Our Approach</Link>
+            <Link href="#contact" className="btn btn-secondary">Partner With Us</Link>
           </div>
         </div>
       </section>
@@ -32,7 +32,7 @@ export default function Home() {
             <div className="thesis-content">
               <h3>The VitalTechAI (E-VTA)™ Paradigm</h3>
               <p><strong>The next evolution in tech isn't about scale—it's about integration.</strong></p>
-              <p>Elphina HCF is at the forefront, funding impact-driven companies focused on the spaces people already inhabit, helping them evolve into environments of healing, vitality, and high performance.</p>
+              <p>Elphina Venture Studio builds and launches impact-driven companies focused on the spaces people already inhabit, helping them evolve into environments of healing, vitality, and high performance.</p>
               <p>We embed intelligence into:</p>
               <ul style={{ listStyle: 'none', paddingLeft: 0 }}>
                 <li style={{ marginBottom: '0.75rem' }}>• <strong>Home environments</strong> via smart diagnostics and bioadaptive tools</li>
@@ -85,26 +85,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Movement Section */}
+      {/* Studio Approach Section */}
       <section className="section-white">
         <div className="container">
           <div className="section-header">
-            <h2>Elphina-HCF is More Than a Fund... It&rsquo;s a Movement.</h2>
+            <h2>A Venture Studio Built for Impact</h2>
           </div>
           <div className="content-text" style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <p>Born from a belief that the most meaningful tech of our time should serve human vitality, Elphina backs the builders of tomorrow&rsquo;s health infrastructure.</p>
+            <p>Born from a belief that the most meaningful tech of our time should serve human vitality, Elphina builds and scales the companies creating tomorrow&rsquo;s health infrastructure.</p>
             <br />
-            <p>We are a living ecosystem &mdash; not just for financial capital, but for deep partnership with operators, scientists, and visionaries who replace VC ego with empathy, clarity, and precision:</p>
+            <p>We are a living ecosystem &mdash; bringing together operators, scientists, and visionaries who build with empathy, clarity, and precision:</p>
           </div>
           <div className="three-col-grid" style={{ maxWidth: '1200px', margin: '2rem auto' }}>
             <div className="card">
               <Lightbulb size={48} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1.5rem' }} />
-              <h3>Founders</h3>
-              <p>Creating bioadaptive, intelligent platforms</p>
+              <h3>Builders</h3>
+              <p>Creating bioadaptive, intelligent platforms from the ground up</p>
             </div>
             <div className="card">
               <Target size={48} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1.5rem' }} />
-              <h3>LPs</h3>
+              <h3>Partners</h3>
               <p>Who care about legacy, wellbeing, and future-proofing civilization</p>
             </div>
             <div className="card">
@@ -119,11 +119,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What We Fund Section */}
+      {/* What We Build Section */}
       <section id="focus" className="section-white">
         <div className="container">
           <div className="section-header">
-            <h2>What We Fund</h2>
+            <h2>What We Build</h2>
             <p>The Intersection of impactful Tech that empowers people, not just systems &mdash; we call it VitalTechAI (E-VTA)<span className="tm">&trade;</span></p>
           </div>
           <div className="investment-grid">
@@ -260,14 +260,14 @@ export default function Home() {
           {!showFounderForm && !showLPForm ? (
             <div className="cta-grid">
               <div className="cta-box">
-                <h3>For Founders</h3>
-                <p>Are you building the future of vitality? If your startup is advancing one or more of these domains with measurable impact and a revenue model tied to better health and well-being, we want to hear from you.</p>
-                <button className="btn btn-primary" onClick={() => setShowFounderForm(true)}>Apply for Funding</button>
+                <h3>For Entrepreneurs & Builders</h3>
+                <p>Have an idea that could transform health and wellness? We provide the resources, expertise, and infrastructure to turn your vision into a thriving company.</p>
+                <button className="btn btn-primary" onClick={() => setShowFounderForm(true)}>Partner With Us</button>
               </div>
               <div className="cta-box">
-                <h3>For LPs</h3>
-                <p>Invest in the next wave of human-first wellness infrastructure. Join us in backing the builders of tomorrow's health ecosystem.</p>
-                <button className="btn btn-primary" onClick={() => setShowLPForm(true)}>Request the LP Deck</button>
+                <h3>For Investors</h3>
+                <p>Join us in building the next wave of human-first wellness infrastructure. Partner with our studio and portfolio companies.</p>
+                <button className="btn btn-primary" onClick={() => setShowLPForm(true)}>Learn More</button>
               </div>
             </div>
           ) : showFounderForm ? (

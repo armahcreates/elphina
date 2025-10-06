@@ -22,11 +22,11 @@ export default function Header() {
       <nav>
         <Link href="/" className="logo">ELPHINA</Link>
         <div className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
-          <Link href="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+          <Link href="/" onClick={() => setMobileMenuOpen(false)}>Studio</Link>
           <Link href="/about" onClick={() => setMobileMenuOpen(false)}>About</Link>
-          <Link href="/#focus" onClick={() => setMobileMenuOpen(false)}>What We Fund</Link>
+          <Link href="/fund" onClick={() => setMobileMenuOpen(false)}>Fund</Link>
           <Link href="/faq" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
-          <Link href="/#contact" className="nav-cta" onClick={() => setMobileMenuOpen(false)}>Apply for Funding</Link>
+          <Link href="/#contact" className="nav-cta" onClick={() => setMobileMenuOpen(false)}>Partner With Us</Link>
         </div>
         <button
           className="mobile-menu-toggle"
