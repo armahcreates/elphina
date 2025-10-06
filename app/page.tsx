@@ -1,8 +1,16 @@
 'use client';
 
 import Link from 'next/link';
+import { useState } from 'react';
+import FounderForm from '@/components/FounderForm';
+import LPForm from '@/components/LPForm';
+import ContactForm from '@/components/ContactForm';
 
 export default function Home() {
+  const [showFounderForm, setShowFounderForm] = useState(false);
+  const [showLPForm, setShowLPForm] = useState(false);
+  const [showContactForm, setShowContactForm] = useState(false);
+
   return (
     <>
       {/* Hero Section */}
@@ -223,18 +231,97 @@ export default function Home() {
       {/* CTA Section */}
       <section id="contact" className="cta-section">
         <div className="container">
-          <div className="cta-grid">
-            <div className="cta-box">
-              <h3>For Founders</h3>
-              <p>Are you building the future of vitality? If your startup is advancing one or more of these domains with measurable impact and a revenue model tied to better health and well-being, we want to hear from you.</p>
-              <button className="btn btn-primary" onClick={() => alert('Founder survey coming soon!')}>Apply for Funding</button>
+          {!showFounderForm && !showLPForm && !showContactForm ? (
+            <div className="cta-grid">
+              <div className="cta-box">
+                <h3>For Founders</h3>
+                <p>Are you building the future of vitality? If your startup is advancing one or more of these domains with measurable impact and a revenue model tied to better health and well-being, we want to hear from you.</p>
+                <button className="btn btn-primary" onClick={() => setShowFounderForm(true)}>Apply for Funding</button>
+              </div>
+              <div className="cta-box">
+                <h3>For LPs</h3>
+                <p>Invest in the next wave of human-first wellness infrastructure.</p>
+                <button className="btn btn-primary" onClick={() => setShowLPForm(true)}>Request the LP Deck</button>
+              </div>
+              <div className="cta-box">
+                <h3>General Inquiry</h3>
+                <p>Have questions or want to learn more about Elphina HCF?</p>
+                <button className="btn btn-primary" onClick={() => setShowContactForm(true)}>Contact Us</button>
+              </div>
             </div>
-            <div className="cta-box">
-              <h3>For LPs</h3>
-              <p>Invest in the next wave of human-first wellness infrastructure.</p>
-              <a href="mailto:hello@elphinainnovations.com?subject=LP Deck Request" className="btn btn-primary">Request the LP Deck</a>
+          ) : showFounderForm ? (
+            <div>
+              <button
+                onClick={() => setShowFounderForm(false)}
+                style={{
+                  marginBottom: '2rem',
+                  padding: '0.75rem 1.5rem',
+                  background: 'transparent',
+                  border: '1px solid var(--border)',
+                  borderRadius: '8px',
+                  cursor: 'pointer',
+                  fontSize: '0.9375rem',
+                  fontWeight: '600',
+                  color: 'var(--text-primary)',
+                  fontFamily: 'inherit',
+                  transition: 'all 0.2s ease'
+                }}
+                onMouseOver={(e) => e.currentTarget.style.borderColor = 'var(--primary)'}
+                onMouseOut={(e) => e.currentTarget.style.borderColor = 'var(--border)'}
+              >
+                ← Back to Options
+              </button>
+              <FounderForm />
             </div>
-          </div>
+          ) : showLPForm ? (
+            <div>
+              <button
+                onClick={() => setShowLPForm(false)}
+                style={{
+                  marginBottom: '2rem',
+                  padding: '0.75rem 1.5rem',
+                  background: 'transparent',
+                  border: '1px solid var(--border)',
+                  borderRadius: '8px',
+                  cursor: 'pointer',
+                  fontSize: '0.9375rem',
+                  fontWeight: '600',
+                  color: 'var(--text-primary)',
+                  fontFamily: 'inherit',
+                  transition: 'all 0.2s ease'
+                }}
+                onMouseOver={(e) => e.currentTarget.style.borderColor = 'var(--primary)'}
+                onMouseOut={(e) => e.currentTarget.style.borderColor = 'var(--border)'}
+              >
+                ← Back to Options
+              </button>
+              <LPForm />
+            </div>
+          ) : (
+            <div>
+              <button
+                onClick={() => setShowContactForm(false)}
+                style={{
+                  marginBottom: '2rem',
+                  padding: '0.75rem 1.5rem',
+                  background: 'transparent',
+                  border: '1px solid var(--border)',
+                  borderRadius: '8px',
+                  cursor: 'pointer',
+                  fontSize: '0.9375rem',
+                  fontWeight: '600',
+                  color: 'var(--text-primary)',
+                  fontFamily: 'inherit',
+                  transition: 'all 0.2s ease'
+                }}
+                onMouseOver={(e) => e.currentTarget.style.borderColor = 'var(--primary)'}
+                onMouseOut={(e) => e.currentTarget.style.borderColor = 'var(--border)'}
+              >
+                ← Back to Options
+              </button>
+              <ContactForm />
+            </div>
+          )}
         </div>
       </section>
     </>

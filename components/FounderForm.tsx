@@ -1,0 +1,374 @@
+'use client';
+
+import { useState } from 'react';
+
+export default function FounderForm() {
+  const [formData, setFormData] = useState({
+    founderName: '',
+    email: '',
+    phone: '',
+    companyName: '',
+    companyWebsite: '',
+    stage: '',
+    fundingRaised: '',
+    sector: '',
+    description: '',
+    pitchDeck: '',
+    teamSize: '',
+    location: ''
+  });
+
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Here you would typically send the data to your backend
+    console.log('Form submitted:', formData);
+    setSubmitted(true);
+
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setSubmitted(false);
+      setFormData({
+        founderName: '',
+        email: '',
+        phone: '',
+        companyName: '',
+        companyWebsite: '',
+        stage: '',
+        fundingRaised: '',
+        sector: '',
+        description: '',
+        pitchDeck: '',
+        teamSize: '',
+        location: ''
+      });
+    }, 3000);
+  };
+
+  if (submitted) {
+    return (
+      <div style={{
+        padding: '3rem',
+        background: 'var(--primary)',
+        borderRadius: '16px',
+        textAlign: 'center',
+        color: 'var(--background)'
+      }}>
+        <h3 style={{ fontSize: '2rem', marginBottom: '1rem', fontWeight: '600' }}>Thank you for your submission!</h3>
+        <p style={{ fontSize: '1.125rem', opacity: '0.95' }}>We'll review your application and get back to you within 5-7 business days.</p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} style={{
+      maxWidth: '800px',
+      margin: '0 auto',
+      padding: '3rem',
+      background: 'var(--background)',
+      borderRadius: '16px',
+      border: '1px solid var(--border)'
+    }}>
+      <h3 style={{ fontSize: '1.75rem', marginBottom: '2rem', color: 'var(--primary)', textAlign: 'center', fontWeight: '600' }}>
+        Founder Application
+      </h3>
+
+      <div style={{ marginBottom: '1.5rem' }}>
+        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+          Founder Name *
+        </label>
+        <input
+          type="text"
+          name="founderName"
+          value={formData.founderName}
+          onChange={handleChange}
+          required
+          style={{
+            width: '100%',
+            padding: '0.75rem',
+            border: '1px solid var(--border)',
+            borderRadius: '8px',
+            fontSize: '1rem',
+            fontFamily: 'inherit',
+            transition: 'border-color 0.2s ease'
+          }}
+        />
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
+        <div>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+            Email *
+          </label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            style={{
+              width: '100%',
+              padding: '0.75rem',
+              border: '2px solid var(--off-white)',
+              borderRadius: '8px',
+              fontSize: '1rem'
+            }}
+          />
+        </div>
+        <div>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+            Phone
+          </label>
+          <input
+            type="tel"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            style={{
+              width: '100%',
+              padding: '0.75rem',
+              border: '2px solid var(--off-white)',
+              borderRadius: '8px',
+              fontSize: '1rem'
+            }}
+          />
+        </div>
+      </div>
+
+      <div style={{ marginBottom: '1.5rem' }}>
+        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+          Company Name *
+        </label>
+        <input
+          type="text"
+          name="companyName"
+          value={formData.companyName}
+          onChange={handleChange}
+          required
+          style={{
+            width: '100%',
+            padding: '0.75rem',
+            border: '1px solid var(--border)',
+            borderRadius: '8px',
+            fontSize: '1rem',
+            fontFamily: 'inherit',
+            transition: 'border-color 0.2s ease'
+          }}
+        />
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
+        <div>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+            Company Website
+          </label>
+          <input
+            type="url"
+            name="companyWebsite"
+            value={formData.companyWebsite}
+            onChange={handleChange}
+            placeholder="https://"
+            style={{
+              width: '100%',
+              padding: '0.75rem',
+              border: '2px solid var(--off-white)',
+              borderRadius: '8px',
+              fontSize: '1rem'
+            }}
+          />
+        </div>
+        <div>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+            Location *
+          </label>
+          <input
+            type="text"
+            name="location"
+            value={formData.location}
+            onChange={handleChange}
+            required
+            placeholder="City, Country"
+            style={{
+              width: '100%',
+              padding: '0.75rem',
+              border: '2px solid var(--off-white)',
+              borderRadius: '8px',
+              fontSize: '1rem'
+            }}
+          />
+        </div>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
+        <div>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+            Stage *
+          </label>
+          <select
+            name="stage"
+            value={formData.stage}
+            onChange={handleChange}
+            required
+            style={{
+              width: '100%',
+              padding: '0.75rem',
+              border: '1px solid var(--border)',
+              borderRadius: '8px',
+              fontSize: '1rem',
+              background: 'var(--background)',
+              fontFamily: 'inherit',
+              transition: 'border-color 0.2s ease'
+            }}
+          >
+            <option value="">Select stage</option>
+            <option value="pre-seed">Pre-Seed</option>
+            <option value="seed">Seed</option>
+            <option value="series-a">Series A</option>
+            <option value="series-b">Series B</option>
+          </select>
+        </div>
+        <div>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+            Team Size *
+          </label>
+          <input
+            type="number"
+            name="teamSize"
+            value={formData.teamSize}
+            onChange={handleChange}
+            required
+            min="1"
+            style={{
+              width: '100%',
+              padding: '0.75rem',
+              border: '2px solid var(--off-white)',
+              borderRadius: '8px',
+              fontSize: '1rem'
+            }}
+          />
+        </div>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
+        <div>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+            Sector *
+          </label>
+          <select
+            name="sector"
+            value={formData.sector}
+            onChange={handleChange}
+            required
+            style={{
+              width: '100%',
+              padding: '0.75rem',
+              border: '1px solid var(--border)',
+              borderRadius: '8px',
+              fontSize: '1rem',
+              background: 'var(--background)',
+              fontFamily: 'inherit',
+              transition: 'border-color 0.2s ease'
+            }}
+          >
+            <option value="">Select sector</option>
+            <option value="biotech">BioTech</option>
+            <option value="functional-nutrition">Functional Nutrition</option>
+            <option value="healthtech">HealthTech</option>
+            <option value="medtech">MedTech</option>
+            <option value="infrastructure">Infrastructure of Vitality</option>
+            <option value="corporate-wellness">Corporate Wellness</option>
+            <option value="media">Media & Communications</option>
+            <option value="real-estate">Wellness Real-Estate</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+            Funding Raised
+          </label>
+          <input
+            type="text"
+            name="fundingRaised"
+            value={formData.fundingRaised}
+            onChange={handleChange}
+            placeholder="e.g., $500K"
+            style={{
+              width: '100%',
+              padding: '0.75rem',
+              border: '2px solid var(--off-white)',
+              borderRadius: '8px',
+              fontSize: '1rem'
+            }}
+          />
+        </div>
+      </div>
+
+      <div style={{ marginBottom: '1.5rem' }}>
+        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+          Company Description *
+        </label>
+        <textarea
+          name="description"
+          value={formData.description}
+          onChange={handleChange}
+          required
+          rows={5}
+          placeholder="Tell us about your company, your mission, and how you align with VitalTechAI (E-VTA)™..."
+          style={{
+            width: '100%',
+            padding: '0.75rem',
+            border: '1px solid var(--border)',
+            borderRadius: '8px',
+            fontSize: '1rem',
+            fontFamily: 'inherit',
+            resize: 'vertical',
+            transition: 'border-color 0.2s ease'
+          }}
+        />
+      </div>
+
+      <div style={{ marginBottom: '2rem' }}>
+        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-primary)', fontSize: '0.9375rem' }}>
+          Pitch Deck URL
+        </label>
+        <input
+          type="url"
+          name="pitchDeck"
+          value={formData.pitchDeck}
+          onChange={handleChange}
+          placeholder="https://... (Google Drive, Dropbox, etc.)"
+          style={{
+            width: '100%',
+            padding: '0.75rem',
+            border: '1px solid var(--border)',
+            borderRadius: '8px',
+            fontSize: '1rem',
+            fontFamily: 'inherit',
+            transition: 'border-color 0.2s ease'
+          }}
+        />
+      </div>
+
+      <button
+        type="submit"
+        className="btn btn-primary"
+        style={{
+          width: '100%',
+          padding: '1rem',
+          fontSize: '1.1rem',
+          cursor: 'pointer'
+        }}
+      >
+        Submit Application
+      </button>
+    </form>
+  );
+}

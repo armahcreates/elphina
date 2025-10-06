@@ -172,11 +172,13 @@ export default function FAQ() {
           {faqs.map((category, categoryIndex) => (
             <div key={categoryIndex} style={{ marginBottom: '3rem' }}>
               <h2 style={{
-                fontSize: '2rem',
-                color: 'var(--aurora-purple)',
+                fontSize: '1.75rem',
+                color: 'var(--primary)',
                 marginBottom: '2rem',
-                borderBottom: '3px solid var(--periwinkle)',
-                paddingBottom: '0.5rem'
+                borderBottom: '2px solid var(--border)',
+                paddingBottom: '0.75rem',
+                fontWeight: '700',
+                letterSpacing: '-0.5px'
               }}>
                 {category.category}
               </h2>
@@ -189,37 +191,38 @@ export default function FAQ() {
                   <div
                     key={faqIndex}
                     style={{
-                      marginBottom: '1.5rem',
-                      border: '2px solid var(--off-white)',
-                      borderRadius: '10px',
+                      marginBottom: '1rem',
+                      border: '1px solid var(--border)',
+                      borderRadius: '12px',
                       overflow: 'hidden',
-                      transition: 'all 0.3s ease'
+                      transition: 'all 0.2s ease'
                     }}
                   >
                     <button
                       onClick={() => toggleFAQ(globalIndex)}
                       style={{
                         width: '100%',
-                        padding: '1.5rem',
-                        background: isOpen ? 'var(--periwinkle-light)' : 'var(--white)',
+                        padding: '1.25rem 1.5rem',
+                        background: isOpen ? 'var(--background-secondary)' : 'var(--background)',
                         border: 'none',
                         textAlign: 'left',
                         cursor: 'pointer',
                         display: 'flex',
                         justifyContent: 'space-between',
                         alignItems: 'center',
-                        fontSize: '1.15rem',
+                        fontSize: '1.0625rem',
                         fontWeight: '600',
-                        color: isOpen ? 'var(--white)' : 'var(--charcoal)',
-                        transition: 'all 0.3s ease'
+                        color: 'var(--text-primary)',
+                        transition: 'all 0.2s ease',
+                        fontFamily: 'inherit'
                       }}
                     >
                       <span>{faq.q}</span>
                       <span style={{
-                        fontSize: '1.5rem',
+                        fontSize: '1.25rem',
                         transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-                        transition: 'transform 0.3s ease',
-                        color: isOpen ? 'var(--white)' : 'var(--periwinkle)'
+                        transition: 'transform 0.2s ease',
+                        color: 'var(--text-secondary)'
                       }}>
                         ▼
                       </span>
@@ -228,11 +231,11 @@ export default function FAQ() {
                     {isOpen && (
                       <div style={{
                         padding: '1.5rem',
-                        background: 'var(--off-white)',
-                        fontSize: '1.05rem',
-                        lineHeight: '1.8',
-                        color: 'var(--charcoal)',
-                        borderTop: '2px solid var(--periwinkle-light)'
+                        background: 'var(--background-secondary)',
+                        fontSize: '1rem',
+                        lineHeight: '1.7',
+                        color: 'var(--text-secondary)',
+                        borderTop: '1px solid var(--border)'
                       }}>
                         {faq.a}
                       </div>
@@ -246,21 +249,21 @@ export default function FAQ() {
           {/* Contact CTA */}
           <div style={{
             marginTop: '4rem',
-            padding: '3rem',
-            background: 'linear-gradient(135deg, var(--periwinkle-light), var(--periwinkle))',
-            borderRadius: '20px',
+            padding: '3.5rem 3rem',
+            background: 'var(--primary)',
+            borderRadius: '16px',
             textAlign: 'center',
-            color: 'var(--white)'
+            color: 'var(--background)'
           }}>
-            <h3 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Still have questions?</h3>
-            <p style={{ fontSize: '1.1rem', marginBottom: '2rem' }}>
+            <h3 style={{ fontSize: '1.75rem', marginBottom: '1rem', fontWeight: '600' }}>Still have questions?</h3>
+            <p style={{ fontSize: '1.125rem', marginBottom: '2rem', opacity: '0.95' }}>
               We&rsquo;re here to help you understand how Elphina can support your vision.
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/#contact" className="btn btn-primary">
+              <Link href="/#contact" className="btn" style={{ background: 'var(--background)', color: 'var(--primary)' }}>
                 Contact Us
               </Link>
-              <a href="mailto:hello@elphinainnovations.com" className="btn" style={{ background: 'var(--white)', color: 'var(--aurora-purple)' }}>
+              <a href="mailto:hello@elphinainnovations.com" className="btn" style={{ background: 'transparent', color: 'var(--background)', border: '1.5px solid var(--background)' }}>
                 Email Us
               </a>
             </div>
@@ -271,17 +274,17 @@ export default function FAQ() {
       {/* Quick Links */}
       <section className="section-off-white" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
         <div className="container" style={{ maxWidth: '900px', textAlign: 'center' }}>
-          <h3 style={{ fontSize: '1.8rem', marginBottom: '2rem', color: 'var(--charcoal)' }}>
+          <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem', color: 'var(--text-primary)', fontWeight: '600' }}>
             Learn More About Elphina
           </h3>
-          <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/about" className="btn" style={{ background: 'var(--periwinkle)', color: 'var(--white)' }}>
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Link href="/about" className="btn btn-secondary">
               About Us
             </Link>
-            <Link href="/#focus" className="btn" style={{ background: 'var(--periwinkle)', color: 'var(--white)' }}>
+            <Link href="/#focus" className="btn btn-secondary">
               What We Fund
             </Link>
-            <Link href="/#portfolio" className="btn" style={{ background: 'var(--periwinkle)', color: 'var(--white)' }}>
+            <Link href="/#portfolio" className="btn btn-secondary">
               Portfolio
             </Link>
           </div>

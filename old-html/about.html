@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Elphina Humanity Centric Fund</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --aurora-pink: #ff6b9d;
+            --aurora-purple: #c44569;
+            --aurora-blue: #667eea;
+            --aurora-cyan: #764ba2;
+            --periwinkle: #8b9dc3;
+            --periwinkle-light: #b4c1db;
+            --charcoal: #2c3e50;
+            --off-white: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--charcoal);
+            background: var(--off-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Aurora Gradient Background Animation */
+        @keyframes aurora {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .aurora-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #667eea 75%, #764ba2 100%);
+            background-size: 400% 400%;
+            animation: aurora 15s ease infinite;
+        }
+
+        /* Header Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--aurora-purple);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--periwinkle);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Quote Section */
+        .hero-quote {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 100px;
+        }
+
+        .hero-quote-content {
+            position: relative;
+            z-index: 2;
+            color: var(--white);
+            max-width: 1100px;
+            padding: 2rem;
+        }
+
+        .hero-quote h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            line-height: 1.3;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            display: inline-block;
+            background: var(--white);
+            color: var(--aurora-purple);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-white {
+            background: var(--white);
+        }
+
+        .section-off-white {
+            background: var(--off-white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .section-header h3 {
+            font-size: 2rem;
+            color: var(--periwinkle);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--charcoal);
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.9;
+        }
+
+        .content-text {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            margin-bottom: 2rem;
+            max-width: 1100px;
+            margin: 0 auto 2rem;
+        }
+
+        .content-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .content-text strong {
+            color: var(--aurora-purple);
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, var(--periwinkle-light), var(--periwinkle));
+            padding: 3rem;
+            border-radius: 20px;
+            color: var(--white);
+            max-width: 1100px;
+            margin: 3rem auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight-box h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-box p {
+            font-size: 1.15rem;
+            line-height: 1.9;
+        }
+
+        /* Impact Banner */
+        .impact-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 4rem 0;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .impact-banner h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .impact-banner h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            opacity: 0.95;
+        }
+
+        /* Ecosystem Grid */
+        .ecosystem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem auto;
+            max-width: 1100px;
+        }
+
+        .ecosystem-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            border-top: 4px solid var(--periwinkle);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .ecosystem-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .ecosystem-card h4 {
+            font-size: 1.3rem;
+            color: var(--aurora-purple);
+            margin-bottom: 1rem;
+        }
+
+        .ecosystem-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Pillars Section */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .pillar-card {
+            background: linear-gradient(135deg, var(--white) 0%, var(--off-white) 100%);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid var(--aurora-purple);
+        }
+
+        .pillar-card h4 {
+            font-size: 1.5rem;
+            color: var(--aurora-purple);
+            margin-bottom: 1.5rem;
+        }
+
+        .pillar-card p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .pillar-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .pillar-card ul li {
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .pillar-card ul li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--periwinkle);
+            font-weight: bold;
+        }
+
+        /* Trademark */
+        .tm {
+            font-size: 0.6em;
+            vertical-align: super;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 2;
+            color: var(--white);
+        }
+
+        .footer-links {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.7;
+        }
+
+        .social-links {
+            margin: 1.5rem 0;
+        }
+
+        .social-links a {
+            color: var(--white);
+            margin: 0 1rem;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: opacity 0.3s;
+        }
+
+        .social-links a:hover {
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-quote h1 {
+                font-size: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .section-header h3 {
+                font-size: 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">ELPHINA HCF</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="index.html#focus">What We Fund</a>
+                <a href="index.html#portfolio">Portfolio</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Quote Section -->
+    <section class="hero-quote aurora-bg">
+        <div class="hero-quote-content">
+            <h1>"Next Frontier in Tech Isn't Just Smart… It's Personal, Accessible, And Deeply Impactful to Humans Where They Live, Work, And Play".</h1>
+            <a href="#about-content" class="btn">READ MORE</a>
+        </div>
+    </section>
+
+    <!-- Main About Content -->
+    <section id="about-content" class="section-white">
+        <div class="container">
+            <div class="section-header">
+                <h2>HCF Illuminating the Future</h2>
+                <h3>Lighting the Path to the Next Tech Frontier</h3>
+                <p>Backing Human-Centered AI, Underpinned by Elphina's Pillars of Expertise.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Empowering Human Health Where People Live, Work, and Play</h3>
+                <p>We're not investing in AI that displaces people; we're backing AI that restores people...their health, clarity, energy, performance, and aging, backing the builders of tomorrow's human centered infrastructure of vitality.</p>
+            </div>
+
+            <div class="content-text">
+                <p>Elphina's-Humanity-Centric Fund (HCF) I is an inaugural <strong>$100M venture vehicle</strong> designed to advance the future of human-centered health by investing in seed-stage companies at the intersection of AI, biotech, digital therapeutics, environment, functional nutrition, longevity science and the infrastructure to support vitality.</p>
+
+                <p>While other funds may aim to reinforce vertical strength, <strong>Elphina invests in personal strength</strong> — helping individuals live longer, healthier, and more empowered lives supported by an infrastructure of vitality.</p>
+
+                <p>We call our investment thesis <strong>"VitalTechAI (E-VTA)<span class="tm">™</span>"</strong>: Intelligent systems that strengthen the human experience holistically. Elphina is purpose-built to fund the technologies that will redefine healthcare, wellbeing, aging, workplaces, habitat, and performance through smart, adaptive, and deeply personalized platforms — transforming global health and wellness into an ambient, accessible, and deeply personal experiences.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Banner -->
+    <section class="impact-banner">
+        <div class="container">
+            <h2>IMPACT ISN'T A TREND</h2>
+            <h3>IT'S THE INFRASTRUCTURE OF THE NEXT ECONOMY</h3>
+        </div>
+    </section>
+
+    <!-- Movement Section -->
+    <section class="section-off-white">
+        <div class="container">
+            <div class="section-header">
+                <h2>Elphina HCF is More Than a Fund<br>It's a Movement.</h2>
+            </div>
+
+            <div class="content-text">
+                <p>In today's economy, <strong>energy is the currency of productivity</strong> and Elphina HCF funds the systems that generates it sustainably. Born from a belief that the most meaningful tech of our time should serve human vitality, HCF is not investing in AI that displaces people; we're backing AI that restores people...their health, clarity, energy, performance, and aging, backing the builders of tomorrow's human centered infrastructure of vitality.</p>
+            </div>
+
+            <div class="section-header" style="margin-top: 3rem;">
+                <h3>HCF is funding a living ecosystem of:</h3>
+            </div>
+
+            <div class="ecosystem-grid">
+                <div class="ecosystem-card">
+                    <h4>🚀 Founders</h4>
+                    <p>Creating bioadaptive, intelligent platforms</p>
+                </div>
+                <div class="ecosystem-card">
+                    <h4>💼 LPs</h4>
+                    <p>Who care about legacy, wellbeing, and future-proofing civilization</p>
+                </div>
+                <div class="ecosystem-card">
+                    <h4>🧬 Experts</h4>
+                    <p>In AI, nutrition, biotech, and healing systems</p>
+                </div>
+                <div class="ecosystem-card">
+                    <h4>🌍 Global Network</h4>
+                    <p>People who see health, longevity, & wellness as innovation's highest calling</p>
+                </div>
+            </div>
+
+            <div class="content-text" style="text-align: center; margin-top: 3rem; font-size: 1.2rem;">
+                <p><strong>Together, we don't just invest in the future; we raise capital to light the path to impactful, personal, accessible, and attainable health and wellness.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- VitalTechAI Details -->
+    <section class="section-white">
+        <div class="container">
+            <div class="content-text">
+                <p>HCF raises impact capital for a different kind of outcome: <strong>intelligent, regenerative, and deeply human.</strong> Elphina's HCF backs the next wave of VitalTechAI (E-VTA)<span class="tm">™</span> platforms — scientifically rigorous startups that weave human-centered AI and bio-intelligence into every facet of daily life.</p>
+
+                <p>From homes to workplaces to healing environments, our portfolio enables <strong>true prevention, proactive care, precision treatment, and performance optimization</strong> — not just better metrics, but a redefinition of what health and wellness can be.</p>
+
+                <p>These entrepreneurs reduce friction, restore agency, and unlock new health data channels through elegant sleek design, ambient intelligence, and scalable engagement.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>These are not startups with impact as a footnote</h3>
+                <p>They are VitalTechAI (E-VTA)<span class="tm">™</span> companies building AI-powered, bio-intelligent systems</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pillars of Expertise -->
+    <section class="section-off-white">
+        <div class="container">
+            <div class="section-header">
+                <h2>Elphina Pillars of Expertise</h2>
+                <p>Elphina is more than a source of capital; We're a human-centered venture engine built for long-term value creation and global impact.</p>
+            </div>
+
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <h4>Operating Infrastructure</h4>
+                    <p>We provide the necessary infrastructure, knowledge capital, and growth strategy to our portfolio.</p>
+                    <p>Our expert ecosystem unites seasoned business executives and operators from:</p>
+                    <ul>
+                        <li>BioTech</li>
+                        <li>HealthTech</li>
+                        <li>MedTech</li>
+                        <li>Diagnostics</li>
+                        <li>Genomics</li>
+                        <li>Therapeutics</li>
+                        <li>AI & Neuroscience</li>
+                    </ul>
+                </div>
+
+                <div class="pillar-card">
+                    <h4>Elite Partnerships</h4>
+                    <p>Drawn from leading tech and consulting firms:</p>
+                    <ul>
+                        <li>Google</li>
+                        <li>Microsoft</li>
+                        <li>Amazon</li>
+                        <li>Booz Allen</li>
+                        <li>HP</li>
+                        <li>CSC</li>
+                        <li>Leading clinical systems</li>
+                    </ul>
+                </div>
+
+                <div class="pillar-card">
+                    <h4>Scientific & Cultural Expertise</h4>
+                    <p>We partner with behavioral scientists, longevity researchers, and wellness thought leaders to co-create trust, drive adoption, and tailor solutions to every community and environment.</p>
+                    <p style="margin-top: 1.5rem;">The portfolio gains access to a network that supports breakthroughs that drive VitalTechAI (E-VTA)<span class="tm">™</span> into the very fabric of daily life, delivering financial returns to investors and enduring impact for people, portfolios, and the planet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="aurora-bg">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="index.html#portfolio">Portfolio</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div>
+                <p><strong>Email:</strong> <a href="mailto:hello@elphinainnovations.com" style="color: white;">hello@elphinainnovations.com</a></p>
+            </div>
+            <div class="social-links">
+                <a href="#" onclick="alert('LinkedIn coming soon'); return false;">LinkedIn</a>
+                <a href="#" onclick="alert('Instagram coming soon'); return false;">Instagram</a>
+                <a href="#" onclick="alert('Medium coming soon'); return false;">Medium</a>
+            </div>
+            <div style="margin-top: 2rem; opacity: 0.9;">
+                <p>© 2025 Elphina Investment Management</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
