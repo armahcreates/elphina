@@ -145,7 +145,7 @@ export default function Home() {
             </div>
             <div>
               <img
-                src="https://images.unsplash.com/photo-1583912267550-1e0c4d9b0103?w=600&q=80"
+                src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=600&q=80"
                 alt="Biotech lab and research"
               />
             </div>
