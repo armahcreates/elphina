@@ -70,6 +70,14 @@ export default function Home() {
             <h2>Our Vision: The VitalTechAI (E-VTA)<span className="tm">&trade;</span> Paradigm Shift</h2>
             <p>The Future of Health &amp; Wellness in Motion</p>
           </div>
+
+          {/* Vision Image */}
+          <div className="hero-image">
+            <img
+              src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1200&q=80"
+              alt="DNA and biotech innovation"
+            />
+          </div>
           <div className="content-text" style={{ maxWidth: '1100px', margin: '0 auto' }}>
             <p>Elevating human interaction by backing impact technologies that make health and wellness accessible, attainable, personal, preventative, and empowering &mdash; everywhere people live, work, and play.</p>
             <br />
@@ -126,6 +134,29 @@ export default function Home() {
             <h2>What We Build</h2>
             <p>The Intersection of impactful Tech that empowers people, not just systems &mdash; we call it VitalTechAI (E-VTA)<span className="tm">&trade;</span></p>
           </div>
+
+          {/* Focus Area Images */}
+          <div className="image-grid-3">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=600&q=80"
+                alt="Longevity and wellness research"
+              />
+            </div>
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1582719366862-a8d74a0e2b31?w=600&q=80"
+                alt="Biotech lab and research"
+              />
+            </div>
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=600&q=80"
+                alt="Wellness and meditation"
+              />
+            </div>
+          </div>
+
           <div className="investment-grid">
             <div className="investment-card">
               <Dna size={40} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1rem' }} />
@@ -215,7 +246,7 @@ export default function Home() {
 
           <div className="vital-cards">
             <div className="vital-card" style={{
-              backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url(https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80)',
+              backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80)',
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}>
@@ -224,7 +255,7 @@ export default function Home() {
               <p>Smart building systems that adapt to occupant biometrics—optimizing not just comfort but health and well-being. Corporate Wellness Infrastructure with technology-assisted productivity through real-time human-machine interfaces prioritizing employee health, safety, and wellness.</p>
             </div>
             <div className="vital-card" style={{
-              backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url(https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80)',
+              backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(https://images.unsplash.com/photo-1628595351029-c2bf17511435?w=800&q=80)',
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}>
@@ -233,7 +264,7 @@ export default function Home() {
               <p>AI-driven, personalized nutrition ecosystems that tune metabolic performance. BioTech innovations spanning Genomics, AgriTech, and precision medicine making "food as medicine" accessible and actionable for all.</p>
             </div>
             <div className="vital-card" style={{
-              backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url(https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80)',
+              backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80)',
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}>
@@ -242,7 +273,7 @@ export default function Home() {
               <p>AI-powered sensors and analytics woven into living spaces and on the move—catching early warning signs and enabling proactive care right where life happens, from home to workplace.</p>
             </div>
             <div className="vital-card" style={{
-              backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url(https://images.unsplash.com/photo-1545389336-cf090694435e?w=800&q=80)',
+              backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80)',
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}>

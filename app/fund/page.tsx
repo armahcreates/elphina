@@ -31,6 +31,14 @@ export default function Fund() {
             <p>Investing in the Infrastructure of Vitality</p>
           </div>
 
+          {/* Fund Hero Image */}
+          <div className="hero-image">
+            <img
+              src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=1200&q=80"
+              alt="Wellness and healthy lifestyle"
+            />
+          </div>
+
           <div className="highlight-box">
             <h3>Human-Centered AI That Restores, Not Replaces</h3>
             <p>We invest in technologies that restore human vitality—health, clarity, energy, performance, and longevity. Our focus is on the infrastructure that makes wellness accessible, attainable, and deeply personal.</p>

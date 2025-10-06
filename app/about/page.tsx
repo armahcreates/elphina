@@ -23,6 +23,14 @@ export default function About() {
             <p>Creating Human-Centered AI Companies, Powered by Elphina&rsquo;s Pillars of Expertise</p>
           </div>
 
+          {/* About Hero Image */}
+          <div className="hero-image">
+            <img
+              src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=1200&q=80"
+              alt="Elderly person staying active - longevity and wellness"
+            />
+          </div>
+
           <div className="highlight-box">
             <h3>Empowering Human Health Where People Live, Work, and Play</h3>
             <p>We&rsquo;re not building AI that displaces people; we&rsquo;re creating AI that restores people—their health, clarity, energy, performance, and longevity. We build tomorrow&rsquo;s human-centered infrastructure of vitality.</p>
