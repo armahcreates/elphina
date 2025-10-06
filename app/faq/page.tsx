@@ -2,12 +2,23 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { Info, Target, Award, Leaf, Lightbulb, Building2, HelpCircle } from 'lucide-react';
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const categoryIcons: { [key: string]: any } = {
+    "About Elphina HCF": Info,
+    "Investment Focus": Target,
+    "The Elphina Advantage": Award,
+    "Impact & ESG": Leaf,
+    "Infrastructure & Innovation": Building2,
+    "For Founders": Lightbulb,
+    "Understanding the Thesis": HelpCircle
   };
 
   const faqs = [
@@ -169,7 +180,9 @@ export default function FAQ() {
       {/* FAQ Content */}
       <section className="section-white" style={{ paddingTop: '4rem', paddingBottom: '4rem' }}>
         <div className="container" style={{ maxWidth: '900px' }}>
-          {faqs.map((category, categoryIndex) => (
+          {faqs.map((category, categoryIndex) => {
+            const IconComponent = categoryIcons[category.category];
+            return (
             <div key={categoryIndex} style={{ marginBottom: '3rem' }}>
               <h2 style={{
                 fontSize: '1.75rem',
@@ -178,8 +191,12 @@ export default function FAQ() {
                 borderBottom: '2px solid var(--periwinkle-light)',
                 paddingBottom: '0.75rem',
                 fontWeight: '700',
-                letterSpacing: '-0.5px'
+                letterSpacing: '-0.5px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.75rem'
               }}>
+                {IconComponent && <IconComponent size={32} strokeWidth={2} style={{ color: 'var(--periwinkle)' }} />}
                 {category.category}
               </h2>
 
@@ -244,7 +261,8 @@ export default function FAQ() {
                 );
               })}
             </div>
-          ))}
+          );
+          })}
 
           {/* Contact CTA */}
           <div style={{

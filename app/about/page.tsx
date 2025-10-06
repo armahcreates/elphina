@@ -1,9 +1,7 @@
-import Link from 'next/link';
+'use client';
 
-export const metadata = {
-  title: 'About | Elphina Humanity Centric Fund',
-  description: 'Lighting the Path to the Next Tech Frontier. Backing Human-Centered AI, Underpinned by Elphina\'s Pillars of Expertise.',
-};
+import Link from 'next/link';
+import { Lightbulb, Target, Users, Globe, Sparkles, TrendingUp, Heart, Dna, Activity, Stethoscope, Brain, Cpu } from 'lucide-react';
 
 export default function About() {
   return (
@@ -65,18 +63,22 @@ export default function About() {
 
           <div className="ecosystem-grid">
             <div className="ecosystem-card">
+              <Lightbulb size={44} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1.25rem' }} />
               <h4>Founders</h4>
               <p>Creating bioadaptive, intelligent platforms</p>
             </div>
             <div className="ecosystem-card">
+              <Target size={44} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1.25rem' }} />
               <h4>LPs</h4>
               <p>Who care about legacy, wellbeing, and future-proofing civilization</p>
             </div>
             <div className="ecosystem-card">
+              <Users size={44} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1.25rem' }} />
               <h4>Experts</h4>
               <p>In AI, nutrition, biotech, and healing systems</p>
             </div>
             <div className="ecosystem-card">
+              <Globe size={44} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1.25rem' }} />
               <h4>Global Network</h4>
               <p>People who see health, longevity, &amp; wellness as innovation&rsquo;s highest calling</p>
             </div>
@@ -116,35 +118,38 @@ export default function About() {
 
           <div className="pillars-grid">
             <div className="pillar-card">
+              <TrendingUp size={44} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1.25rem' }} />
               <h4>Operating Infrastructure</h4>
               <p>We provide the necessary infrastructure, knowledge capital, and growth strategy to our portfolio.</p>
               <p>Our expert ecosystem unites seasoned business executives and operators from:</p>
               <ul>
-                <li>BioTech</li>
-                <li>HealthTech</li>
-                <li>MedTech</li>
-                <li>Diagnostics</li>
-                <li>Genomics</li>
-                <li>Therapeutics</li>
-                <li>AI &amp; Neuroscience</li>
+                <li><Dna size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />BioTech</li>
+                <li><Heart size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />HealthTech</li>
+                <li><Activity size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />MedTech</li>
+                <li><Stethoscope size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />Diagnostics</li>
+                <li><Dna size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />Genomics</li>
+                <li><Heart size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />Therapeutics</li>
+                <li><Brain size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />AI &amp; Neuroscience</li>
               </ul>
             </div>
 
             <div className="pillar-card">
+              <Sparkles size={44} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1.25rem' }} />
               <h4>Elite Partnerships</h4>
               <p>Drawn from leading tech and consulting firms:</p>
               <ul>
-                <li>Google</li>
-                <li>Microsoft</li>
-                <li>Amazon</li>
-                <li>Booz Allen</li>
-                <li>HP</li>
-                <li>CSC</li>
-                <li>Leading clinical systems</li>
+                <li><Cpu size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />Google</li>
+                <li><Cpu size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />Microsoft</li>
+                <li><Cpu size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />Amazon</li>
+                <li><Cpu size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />Booz Allen</li>
+                <li><Cpu size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />HP</li>
+                <li><Cpu size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />CSC</li>
+                <li><Stethoscope size={16} style={{ display: 'inline', marginRight: '0.5rem', color: 'var(--periwinkle)' }} />Leading clinical systems</li>
               </ul>
             </div>
 
             <div className="pillar-card">
+              <Heart size={44} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1.25rem' }} />
               <h4>Scientific &amp; Cultural Expertise</h4>
               <p>We partner with behavioral scientists, longevity researchers, and wellness thought leaders to co-create trust, drive adoption, and tailor solutions to every community and environment.</p>
               <p style={{ marginTop: '1.5rem' }}>The portfolio gains access to a network that supports breakthroughs that drive VitalTechAI (E-VTA)<span className="tm">&trade;</span> into the very fabric of daily life, delivering financial returns to investors and enduring impact for people, portfolios, and the planet.</p>

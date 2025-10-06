@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { User, Mail, Phone, Building2, Users, DollarSign, Target, MessageSquare, Send } from 'lucide-react';
 
 export default function LPForm() {
   const [formData, setFormData] = useState({
@@ -76,7 +77,8 @@ export default function LPForm() {
       </h3>
 
       <div style={{ marginBottom: '1.5rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+        <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+          <User size={18} style={{ color: 'var(--periwinkle)' }} />
           Full Name *
         </label>
         <input
@@ -102,7 +104,8 @@ export default function LPForm() {
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+            <Mail size={18} style={{ color: 'var(--periwinkle)' }} />
             Email *
           </label>
           <input
@@ -121,7 +124,8 @@ export default function LPForm() {
           />
         </div>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+            <Phone size={18} style={{ color: 'var(--periwinkle)' }} />
             Phone *
           </label>
           <input
@@ -142,7 +146,8 @@ export default function LPForm() {
       </div>
 
       <div style={{ marginBottom: '1.5rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+        <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+          <Building2 size={18} style={{ color: 'var(--periwinkle)' }} />
           Organization/Fund *
         </label>
         <input
@@ -168,7 +173,8 @@ export default function LPForm() {
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+            <Users size={18} style={{ color: 'var(--periwinkle)' }} />
             Investor Type *
           </label>
           <select
@@ -200,7 +206,8 @@ export default function LPForm() {
           </select>
         </div>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+            <DollarSign size={18} style={{ color: 'var(--periwinkle)' }} />
             Investment Range *
           </label>
           <select
@@ -233,7 +240,8 @@ export default function LPForm() {
       </div>
 
       <div style={{ marginBottom: '1.5rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+        <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+          <Target size={18} style={{ color: 'var(--periwinkle)' }} />
           Investment Interests
         </label>
         <textarea
@@ -259,7 +267,8 @@ export default function LPForm() {
       </div>
 
       <div style={{ marginBottom: '2rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+        <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+          <MessageSquare size={18} style={{ color: 'var(--periwinkle)' }} />
           Message
         </label>
         <textarea
@@ -291,9 +300,14 @@ export default function LPForm() {
           width: '100%',
           padding: '1rem',
           fontSize: '1.1rem',
-          cursor: 'pointer'
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '0.5rem'
         }}
       >
+        <Send size={20} />
         Request LP Deck
       </button>
     </form>

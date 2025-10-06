@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { User, Mail, Phone, Building2, Globe, TrendingUp, DollarSign, Target, FileText, Users, MapPin, Send } from 'lucide-react';
 
 export default function FounderForm() {
   const [formData, setFormData] = useState({
@@ -84,7 +85,8 @@ export default function FounderForm() {
       </h3>
 
       <div style={{ marginBottom: '1.5rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+        <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+          <User size={18} style={{ color: 'var(--periwinkle)' }} />
           Founder Name *
         </label>
         <input
@@ -110,7 +112,8 @@ export default function FounderForm() {
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+            <Mail size={18} style={{ color: 'var(--periwinkle)' }} />
             Email *
           </label>
           <input
@@ -129,7 +132,8 @@ export default function FounderForm() {
           />
         </div>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+            <Phone size={18} style={{ color: 'var(--periwinkle)' }} />
             Phone
           </label>
           <input
@@ -149,7 +153,8 @@ export default function FounderForm() {
       </div>
 
       <div style={{ marginBottom: '1.5rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+        <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+          <Building2 size={18} style={{ color: 'var(--periwinkle)' }} />
           Company Name *
         </label>
         <input
@@ -175,7 +180,8 @@ export default function FounderForm() {
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+            <Globe size={18} style={{ color: 'var(--periwinkle)' }} />
             Company Website
           </label>
           <input
@@ -194,7 +200,8 @@ export default function FounderForm() {
           />
         </div>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+            <MapPin size={18} style={{ color: 'var(--periwinkle)' }} />
             Location *
           </label>
           <input
@@ -217,7 +224,8 @@ export default function FounderForm() {
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+            <TrendingUp size={18} style={{ color: 'var(--periwinkle)' }} />
             Stage *
           </label>
           <select
@@ -247,7 +255,8 @@ export default function FounderForm() {
           </select>
         </div>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+            <Users size={18} style={{ color: 'var(--periwinkle)' }} />
             Team Size *
           </label>
           <input
@@ -270,7 +279,8 @@ export default function FounderForm() {
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+            <Target size={18} style={{ color: 'var(--periwinkle)' }} />
             Sector *
           </label>
           <select
@@ -305,7 +315,8 @@ export default function FounderForm() {
           </select>
         </div>
         <div>
-          <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+            <DollarSign size={18} style={{ color: 'var(--periwinkle)' }} />
             Funding Raised
           </label>
           <input
@@ -326,7 +337,8 @@ export default function FounderForm() {
       </div>
 
       <div style={{ marginBottom: '1.5rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+        <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+          <FileText size={18} style={{ color: 'var(--periwinkle)' }} />
           Company Description *
         </label>
         <textarea
@@ -353,7 +365,8 @@ export default function FounderForm() {
       </div>
 
       <div style={{ marginBottom: '2rem' }}>
-        <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+        <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: '600', color: 'var(--charcoal)', fontSize: '1rem' }}>
+          <FileText size={18} style={{ color: 'var(--periwinkle)' }} />
           Pitch Deck URL
         </label>
         <input
@@ -384,9 +397,14 @@ export default function FounderForm() {
           width: '100%',
           padding: '1rem',
           fontSize: '1.1rem',
-          cursor: 'pointer'
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '0.5rem'
         }}
       >
+        <Send size={20} />
         Submit Application
       </button>
     </form>

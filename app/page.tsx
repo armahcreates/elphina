@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { Home, Briefcase, Users, Dna, Apple, Heart, Activity, Building2, Radio, Palmtree, Lightbulb, Target, Sparkles, ArrowRight } from 'lucide-react';
 import FounderForm from '@/components/FounderForm';
 import LPForm from '@/components/LPForm';
 
@@ -97,14 +98,17 @@ export default function Home() {
           </div>
           <div className="three-col-grid" style={{ maxWidth: '1200px', margin: '2rem auto' }}>
             <div className="card">
+              <Lightbulb size={48} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1.5rem' }} />
               <h3>Founders</h3>
               <p>Creating bioadaptive, intelligent platforms</p>
             </div>
             <div className="card">
+              <Target size={48} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1.5rem' }} />
               <h3>LPs</h3>
               <p>Who care about legacy, wellbeing, and future-proofing civilization</p>
             </div>
             <div className="card">
+              <Users size={48} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1.5rem' }} />
               <h3>Experts</h3>
               <p>In AI, nutrition, biotech, and healing systems</p>
             </div>
@@ -124,34 +128,42 @@ export default function Home() {
           </div>
           <div className="investment-grid">
             <div className="investment-card">
+              <Dna size={40} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1rem' }} />
               <h4>BioTech</h4>
               <p>Functional biology, agriculture, environment, genomic precision &amp; personalization</p>
             </div>
             <div className="investment-card">
+              <Apple size={40} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1rem' }} />
               <h4>Functional Nutrition</h4>
               <p>Precision wellness powered by microbiome &amp; metabolism. Food as Medicine, Nutraceuticals, and Ancestral Healing</p>
             </div>
             <div className="investment-card">
+              <Heart size={40} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1rem' }} />
               <h4>HealthTech</h4>
               <p>Personalized care tools and digital wellness platforms</p>
             </div>
             <div className="investment-card">
+              <Activity size={40} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1rem' }} />
               <h4>MedTech</h4>
               <p>Smart diagnostics, wearables, and preventative monitoring</p>
             </div>
             <div className="investment-card">
+              <Building2 size={40} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1rem' }} />
               <h4>Infrastructure of Vitality</h4>
               <p>End-to-end ecosystem built to power deeply personal, regenerative health and wellness experiences</p>
             </div>
             <div className="investment-card">
+              <Briefcase size={40} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1rem' }} />
               <h4>Corporate Wellness Infrastructure</h4>
               <p>Paradigm Shift where SMART automated workflows are personalized and AI tools improve safety, energy, cognition, and retention</p>
             </div>
             <div className="investment-card">
+              <Radio size={40} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1rem' }} />
               <h4>Media &amp; Communications</h4>
               <p>Integral parts of personalization, addressing the human factor, health &amp; well-being</p>
             </div>
             <div className="investment-card">
+              <Palmtree size={40} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1rem' }} />
               <h4>Wellness Real-Estate &amp; Resort Ecosystem</h4>
               <p>Canvas for regenerative, data-driven personalized health, wellness, and longevity</p>
             </div>
@@ -168,14 +180,17 @@ export default function Home() {
           </div>
           <div className="three-col-grid">
             <div className="card">
+              <Sparkles size={48} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1.5rem' }} />
               <h3>Deep Expertise</h3>
               <p>Led by tech operators, clinicians, real estate experts, super-aging/longevity researchers, media, and AI pioneers.</p>
             </div>
             <div className="card">
+              <ArrowRight size={48} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1.5rem' }} />
               <h3>Real Support</h3>
               <p>From Seed to Series B, we activate growth through capital + tech + clinical + globalization + cultural resonance &rarr; accelerated strategy.</p>
             </div>
             <div className="card">
+              <Heart size={48} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1.5rem' }} />
               <h3>Regenerative Vision</h3>
               <p>We&rsquo;re investing in systems that heal the whole &mdash; not just parts.</p>
             </div>
@@ -199,19 +214,39 @@ export default function Home() {
           </div>
 
           <div className="vital-cards">
-            <div className="vital-card">
+            <div className="vital-card" style={{
+              backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url(https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}>
+              <Building2 size={40} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1rem' }} />
               <h4>Infrastructure-as-Wellness</h4>
               <p>Smart building systems that adapt to occupant biometrics—optimizing not just comfort but health and well-being. Corporate Wellness Infrastructure with technology-assisted productivity through real-time human-machine interfaces prioritizing employee health, safety, and wellness.</p>
             </div>
-            <div className="vital-card">
+            <div className="vital-card" style={{
+              backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url(https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}>
+              <Apple size={40} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1rem' }} />
               <h4>Functional Nutrition & BioTech</h4>
               <p>AI-driven, personalized nutrition ecosystems that tune metabolic performance. BioTech innovations spanning Genomics, AgriTech, and precision medicine making "food as medicine" accessible and actionable for all.</p>
             </div>
-            <div className="vital-card">
+            <div className="vital-card" style={{
+              backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url(https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}>
+              <Activity size={40} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1rem' }} />
               <h4>Embedded Monitoring & Diagnostics</h4>
               <p>AI-powered sensors and analytics woven into living spaces and on the move—catching early warning signs and enabling proactive care right where life happens, from home to workplace.</p>
             </div>
-            <div className="vital-card">
+            <div className="vital-card" style={{
+              backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url(https://images.unsplash.com/photo-1545389336-cf090694435e?w=800&q=80)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}>
+              <Home size={40} strokeWidth={1.5} style={{ color: 'var(--periwinkle)', marginBottom: '1rem' }} />
               <h4>Wellness Environments & Media</h4>
               <p>Intelligent, biophilic environments embedded with wellness tech. Ambient AI-powered communications and media experiences creating personalized engagement platforms for self-care and holistic health.</p>
             </div>
